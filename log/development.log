@@ -3,3 +3,24 @@
 Started GET "/assets/rails.png" for 127.0.0.1 at 2013-05-09 18:50:26 -0400
 Connecting to database specified by database.yml
 Served asset /rails.png - 200 OK (7ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (114.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (6.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateItems (20130509230730)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (28.7ms)[0m  [1mCREATE TABLE "items" ("id" serial primary key, "name" character varying(255), "charity_id" integer, "cart_id" integer, "category_id" integer, "price" integer, "description" text, "percentage" integer, "user_id" integer, "purchased_at" date, "expires_from_cart_at" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE INDEX "index_items_on_charity_id" ON "items" ("charity_id")
+  [1m[36m (1.4ms)[0m  [1mCREATE INDEX "index_items_on_cart_id" ON "items" ("cart_id")[0m
+  [1m[35m (23.6ms)[0m  CREATE INDEX "index_items_on_category_id" ON "items" ("category_id")
+  [1m[36m (1.4ms)[0m  [1mCREATE INDEX "index_items_on_user_id" ON "items" ("user_id")[0m
+  [1m[35m (57.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130509230730')
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCategories (20130509231318)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (6.1ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "name" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130509231318')
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 

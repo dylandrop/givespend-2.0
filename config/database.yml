@@ -1,7 +1,7 @@
 production:
   adapter: postgresql
   encoding: utf8
-  database: givespend_prod
+  database: gs_prod
   username: admin
   password: 123123
   port: 5423
@@ -9,7 +9,7 @@ production:
 development:
   adapter: postgresql
   encoding: utf8
-  database: givespend_dev
+  database: gs_dev
   host: localhost
   username: admin
   password: 123123
@@ -18,7 +18,7 @@ development:
 test: &test
   adapter: postgresql
   encoding: utf8
-  database: givespend_test
+  database: gs_test
   host: localhost
   username: admin
   password: 123123

@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  charity: 
+  cart: 
+  category: 
+  price: 1
+  description: MyText
+  percentage: 1
+  user: 
+  purchased_at: 2013-05-09
+  expires_from_cart_at: 2013-05-09
+
+two:
+  name: MyString
+  charity: 
+  cart: 
+  category: 
+  price: 1
+  description: MyText
+  percentage: 1
+  user: 
+  purchased_at: 2013-05-09
+  expires_from_cart_at: 2013-05-09
