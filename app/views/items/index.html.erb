@@ -1,7 +1,11 @@
+<% @categories.each do |category| %>
+  <%= link_to category.name, category %><br>
+<% end %>
+<br>
 <% @items.each do |item| %>
   <%= link_to item do %>
     <%= item.name %><br>
-    <%= number_with_precision(item.price, precision: 2) %> <br>
+    <%= cents_to_dollars item.price %> <br>
     <%= item.description %><br> <Br>
   <% end %>
 <% end %>
