@@ -1,2 +1,7 @@
-<h1>Items#index</h1>
-<p>Find me in app/views/items/index.html.erb</p>
+<% @items.each do |item| %>
+  <%= link_to item do %>
+    <%= item.name %><br>
+    <%= number_with_precision(item.price, precision: 2) %> <br>
+    <%= item.description %><br> <Br>
+  <% end %>
+<% end %>
