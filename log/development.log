@@ -1544,3 +1544,30 @@ Migrating to CreateAuthentications (20130510005415)
   [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateItems (20130509230730)
+Migrating to CreateCategories (20130509231318)
+Migrating to CreateNonprofits (20130510000338)
+Migrating to DeviseCreateUsers (20130510003322)
+Migrating to CreateAuthentications (20130510005415)
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateItems (20130509230730)
+Migrating to CreateCategories (20130509231318)
+Migrating to CreateNonprofits (20130510000338)
+Migrating to DeviseCreateUsers (20130510003322)
+Migrating to CreateAuthentications (20130510005415)
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateItems (20130509230730)
+Migrating to CreateCategories (20130509231318)
+Migrating to CreateNonprofits (20130510000338)
+Migrating to DeviseCreateUsers (20130510003322)
+Migrating to CreateAuthentications (20130510005415)
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
