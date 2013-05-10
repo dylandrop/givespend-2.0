@@ -1513,3 +1513,18 @@ Served asset /items.js - 304 Not Modified (0ms)
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-09 20:22:25 -0400
 Served asset /application.js - 304 Not Modified (0ms)
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateItems (20130509230730)
+Migrating to CreateCategories (20130509231318)
+Migrating to CreateNonprofits (20130510000338)
+Migrating to DeviseCreateUsers (20130510003322)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (103.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "first_name" character varying(255), "last_name" character varying(255), "street_address" character varying(255), "zipcode" integer, "state" character varying(255), "city" character varying(255), "admin" character varying(255) DEFAULT 'f', "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (34.5ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (26.7ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130510003322')
+  [1m[36m (738.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
