@@ -1528,3 +1528,17 @@ Migrating to DeviseCreateUsers (20130510003322)
   [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130510003322')
   [1m[36m (738.4ms)[0m  [1mCOMMIT[0m
   [1m[35m (0.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateItems (20130509230730)
+Migrating to CreateCategories (20130509231318)
+Migrating to CreateNonprofits (20130510000338)
+Migrating to DeviseCreateUsers (20130510003322)
+Migrating to CreateAuthentications (20130510005415)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (42.0ms)[0m  [1mCREATE TABLE "authentications" ("id" serial primary key, "user_id" integer, "provider" character varying(255), "uid" character varying(255), "key" character varying(255), "secret" character varying(255), "code" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE INDEX "index_authentications_on_user_id" ON "authentications" ("user_id")
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130510005415')[0m
+  [1m[35m (2.6ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
