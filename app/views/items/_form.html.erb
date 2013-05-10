@@ -1,0 +1,52 @@
+<br/>
+<div id = "new_item_container">
+<%= form_for(@item, :html => { :multipart => true }) do |f| %>
+
+  <div id = "item_col">
+    <div class="field item-field">
+      <%= f.label :price %><br />
+      <%= f.text_field :price %>
+      <span class="user-error-message"><%= full_error_message(@item, :price) %></span>
+    </div>
+    <div class="field item-field">
+      <%= f.label :item_name %><br />
+      <%= f.text_field :name %>
+      <span class="user-error-message"><%= full_error_message(@item, :name) %></span>
+    </div>
+  </div>
+  <div id = "item_col">
+    <div class="field">
+      <%= f.label :category %><br />
+      <%= f.collection_select( :category_id, Category.find(:all), :id, :name, {:include_blank => true} ) %>
+      <span class="user-error-message"><%= full_error_message(@item, :category_id) %></span>
+    </div>
+    <br / >
+    <div class="area">
+      <%= f.label :description %><br />
+      <%= f.text_area :description %>
+      <span class="user-error-message"><%= full_error_message(@item, :description) %></span>
+    </div>
+    <br />
+  </div>
+  <br />
+  <div id= "big_item_col" style="margin: 0 auto;margin-bottom:25px"><br/>
+    <div align="center" class="item-field">
+      <%= f.label :choose_your_nonprofit %><br /><br />
+      <%= f.collection_select( :percentage, Nonprofit.all, :id, :name, {:include_blank => true} ) %>
+      <span class="user-error-message"><%= full_error_message(@item, :charity_id) %></span>
+    </div>
+      <div class="item-field" align="center">
+        <%= f.label :percentage_for_nonprofit %><br /><br />
+        <%= f.collection_select(:percentage, Item::PERCENTAGES, :to_s, :to_s, {:include_blank => true} ) %>
+        <span class="user-error-message"><%= full_error_message(@item, :percentage) %></span>
+      </div>
+  </div>
+  <br />
+  <br />
+
+  <div class="actions">
+    <br />
+    <%= button_tag "List", :class => "cupid-green", :disable_with => "Saving..." %>
+  </div>
+<% end %>
+</div>
