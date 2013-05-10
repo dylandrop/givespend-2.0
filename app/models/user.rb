@@ -19,4 +19,17 @@ class User < ActiveRecord::Base
   def password_required?
     (authentications.empty? || !password.blank?) && super
   end
+
+  def build_stripe_params(user_url)
+    { 'stripe_user[email]' => email, 
+    'stripe_user[business_type]' => 'sole_prop', 
+    'stripe_user[url]' => user_url, 
+    'stripe_user[first_name]' => first_name,
+    'stripe_user[last_name]' => last_name, 
+    'stripe_user[street_address]' => street_address, 
+    'stripe_user[zip]' => zipcode, 
+    'stripe_user[state]' => state, 
+    'stripe_user[city]' => city, 
+    'stripe_user[currency]' => 'usd' }.reject {|k,v| v.nil?}
+  end
 end

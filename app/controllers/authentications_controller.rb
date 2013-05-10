@@ -27,6 +27,10 @@ class AuthenticationsController < ApplicationController
     facebook
   end
 
-  def stripe
+  def stripe_connect
+    omniauth = request.env["omniauth.auth"]
+    current_user.authentications.create!(:provider => omniauth['provider'], :uid => omniauth['uid'], :token => omniauth['credentials']['token'])
+    flash[:notice] = "Authentication successful."
+    redirect_to new_item_url
   end
 end
