@@ -13590,3 +13590,336 @@ Served asset /users.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-10 12:19:27 -0400
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-10 12:27:03 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uoRLkI5zLQwJvYU5i41os09LAjSJqvPSQ+v+B4J5R1o=", "item"=>{"price"=>"3.00", "name"=>"The Great Gatsby", "category_id"=>"1", "description"=>"Classic tale", "percentage"=>"10"}, "button"=>""}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "items" ("cart_id", "category_id", "charity_id", "created_at", "description", "expires_from_cart_at", "name", "percentage", "price", "purchased_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["cart_id", nil], ["category_id", 1], ["charity_id", nil], ["created_at", Fri, 10 May 2013 16:27:03 UTC +00:00], ["description", "Classic tale"], ["expires_from_cart_at", nil], ["name", "The Great Gatsby"], ["percentage", 10], ["price", 3], ["purchased_at", nil], ["updated_at", Fri, 10 May 2013 16:27:03 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/items.12
+Completed 302 Found in 76ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/items.12" for 127.0.0.1 at 2013-05-10 12:27:03 -0400
+Processing by ItemsController#index as 
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" 
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered items/index.html.erb within layouts/application (48.9ms)
+Completed 200 OK in 78ms (Views: 53.6ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/assets/nonprofits.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:03 -0400
+Served asset /nonprofits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:03 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:03 -0400
+Served asset /authentications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:03 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:03 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:03 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registrations.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:03 -0400
+Served asset /registrations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:03 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:03 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:03 -0400
+Served asset /registrations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:03 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:03 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:03 -0400
+Served asset /nonprofits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:03 -0400
+Served asset /authentications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:03 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:03 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-10 12:27:22 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uoRLkI5zLQwJvYU5i41os09LAjSJqvPSQ+v+B4J5R1o=", "item"=>{"price"=>"3.00", "name"=>"The Great Gatsby", "category_id"=>"1", "description"=>"Classic tale", "percentage"=>"10"}, "button"=>""}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "items" ("cart_id", "category_id", "charity_id", "created_at", "description", "expires_from_cart_at", "name", "percentage", "price", "purchased_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["cart_id", nil], ["category_id", 1], ["charity_id", nil], ["created_at", Fri, 10 May 2013 16:27:22 UTC +00:00], ["description", "Classic tale"], ["expires_from_cart_at", nil], ["name", "The Great Gatsby"], ["percentage", 10], ["price", 3], ["purchased_at", nil], ["updated_at", Fri, 10 May 2013 16:27:22 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/items.13
+Completed 302 Found in 29ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/items.13" for 127.0.0.1 at 2013-05-10 12:27:22 -0400
+Processing by ItemsController#index as 
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" 
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered items/index.html.erb within layouts/application (50.2ms)
+Completed 200 OK in 80ms (Views: 55.2ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:23 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:23 -0400
+Served asset /authentications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:23 -0400
+Served asset /nonprofits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:23 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:23 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registrations.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:23 -0400
+Served asset /registrations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:23 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:23 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:23 -0400
+Served asset /nonprofits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:23 -0400
+Served asset /authentications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:23 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:23 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:23 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:23 -0400
+Served asset /registrations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:23 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:23 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-10 12:27:49 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uoRLkI5zLQwJvYU5i41os09LAjSJqvPSQ+v+B4J5R1o=", "item"=>{"price"=>"3.00", "name"=>"The Great Gatsby", "category_id"=>"1", "description"=>"Classic tale", "percentage"=>"10"}, "button"=>""}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "items" ("cart_id", "category_id", "charity_id", "created_at", "description", "expires_from_cart_at", "name", "percentage", "price", "purchased_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["cart_id", nil], ["category_id", 1], ["charity_id", nil], ["created_at", Fri, 10 May 2013 16:27:49 UTC +00:00], ["description", "Classic tale"], ["expires_from_cart_at", nil], ["name", "The Great Gatsby"], ["percentage", 10], ["price", 300], ["purchased_at", nil], ["updated_at", Fri, 10 May 2013 16:27:49 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/items.14
+Completed 302 Found in 29ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/items.14" for 127.0.0.1 at 2013-05-10 12:27:49 -0400
+Processing by ItemsController#index as 
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" 
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered items/index.html.erb within layouts/application (52.3ms)
+Completed 200 OK in 85ms (Views: 60.0ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:49 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:49 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:49 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:49 -0400
+Served asset /nonprofits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:49 -0400
+Served asset /authentications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registrations.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:49 -0400
+Served asset /registrations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:49 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:49 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:49 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:49 -0400
+Served asset /authentications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:49 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:49 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:49 -0400
+Served asset /nonprofits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:49 -0400
+Served asset /registrations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:49 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:49 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-10 12:27:57 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uoRLkI5zLQwJvYU5i41os09LAjSJqvPSQ+v+B4J5R1o=", "item"=>{"price"=>"3", "name"=>"The Great Gatsby", "category_id"=>"1", "description"=>"Classic tale", "percentage"=>"10"}, "button"=>""}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "items" ("cart_id", "category_id", "charity_id", "created_at", "description", "expires_from_cart_at", "name", "percentage", "price", "purchased_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["cart_id", nil], ["category_id", 1], ["charity_id", nil], ["created_at", Fri, 10 May 2013 16:27:57 UTC +00:00], ["description", "Classic tale"], ["expires_from_cart_at", nil], ["name", "The Great Gatsby"], ["percentage", 10], ["price", 300], ["purchased_at", nil], ["updated_at", Fri, 10 May 2013 16:27:57 UTC +00:00], ["user_id", nil]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/items.15
+Completed 302 Found in 7ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/items.15" for 127.0.0.1 at 2013-05-10 12:27:57 -0400
+Processing by ItemsController#index as 
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" 
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered items/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 21ms (Views: 16.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:57 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:57 -0400
+Served asset /authentications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:57 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registrations.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:57 -0400
+Served asset /registrations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:57 -0400
+Served asset /nonprofits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:57 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-10 12:27:57 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:57 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:57 -0400
+Served asset /nonprofits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:57 -0400
+Served asset /registrations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:57 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:57 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:57 -0400
+Served asset /authentications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:57 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:57 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-10 12:27:57 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml

@@ -11,6 +11,8 @@ class Item < ActiveRecord::Base
   private
 
   def price_to_cents
-    self.price = self.price * 100
+    if self.price.is_a? Fixnum
+      self.price = self.price * 100
+    end
   end
 end
