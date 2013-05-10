@@ -12,7 +12,8 @@ class User < ActiveRecord::Base
 
   def apply_omniauth(omniauth)
     self.email = omniauth['extra']['raw_info']['email'] if omniauth['provider'] == 'facebook'
-    authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'], :token=> omniauth['credentials']['token'])
+    secret = omniauth['credentials'].try(:[],'secret')
+    authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'], :token=> omniauth['credentials']['token'], :secret => secret)
   end
 
   def password_required?

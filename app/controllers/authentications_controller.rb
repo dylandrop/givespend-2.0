@@ -1,4 +1,5 @@
 class AuthenticationsController < ApplicationController
+
   def facebook
     omniauth = request.env["omniauth.auth"]
     authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
@@ -23,6 +24,7 @@ class AuthenticationsController < ApplicationController
   end
 
   def twitter
+    facebook
   end
 
   def stripe

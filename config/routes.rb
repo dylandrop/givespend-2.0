@@ -1,5 +1,5 @@
 Givespend::Application.routes.draw do
-  devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout', :sign_up => 'new' }, :controllers => {:omniauth_callbacks => "authentications"}
+  devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout', :sign_up => 'new' }, :controllers => {:omniauth_callbacks => "authentications", :registrations => 'registrations'}
   resources :authentications, only: [:index]
   resources :nonprofits, only: [:index, :show]
   resources :items, only: [:index,:new,:create,:show]

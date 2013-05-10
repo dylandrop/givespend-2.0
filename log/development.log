@@ -4673,3 +4673,1124 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-10 00:20:38 -0400
 Served asset /users.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-10 04:43:19 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (2.1ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  [1m[35mCategory Load (0.8ms)[0m  SELECT "categories".* FROM "categories" 
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  Rendered items/index.html.erb within layouts/application (63.3ms)
+Completed 200 OK in 322ms (Views: 200.3ms | ActiveRecord: 31.4ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:19 -0400
+Served asset /items.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:19 -0400
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/nonprofits.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:19 -0400
+Served asset /nonprofits.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:19 -0400
+Served asset /authentications.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:19 -0400
+Served asset /categories.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:19 -0400
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:19 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:19 -0400
+Served asset /authentications.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:19 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:19 -0400
+Served asset /categories.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:19 -0400
+Served asset /items.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/nonprofits.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:19 -0400
+Served asset /nonprofits.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:19 -0400
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:19 -0400
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started DELETE "/users/logout" for 127.0.0.1 at 2013-05-10 04:43:21 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UeI6GuSxjBS9PskvOWnDz1ox3r70ItDDG1azsc6KJjk="}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-10 04:43:21 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered items/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:21 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:21 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:21 -0400
+Served asset /nonprofits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:21 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:21 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:21 -0400
+Served asset /authentications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:21 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:21 -0400
+Served asset /authentications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:21 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:21 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:21 -0400
+Served asset /nonprofits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:21 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:21 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:21 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2013-05-10 04:43:22 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:22 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:22 -0400
+Served asset /authentications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:22 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:22 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:22 -0400
+Served asset /nonprofits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:22 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:22 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:22 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:22 -0400
+Served asset /authentications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:22 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:22 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:22 -0400
+Served asset /nonprofits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:22 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:22 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/auth/twitter" for 127.0.0.1 at 2013-05-10 04:43:24 -0400
+
+
+Started GET "/users/auth/twitter/callback?oauth_token=SOFm5cxEDQpWU4kwGM8rHOW4pITMRVHkZX1WvQLwSw&oauth_verifier=1tPWInEBpTxDwtgJWCT2fCucUlNuMUkEN4RvR1IH4Ks" for 127.0.0.1 at 2013-05-10 04:43:37 -0400
+Processing by AuthenticationsController#twitter as HTML
+  Parameters: {"oauth_token"=>"SOFm5cxEDQpWU4kwGM8rHOW4pITMRVHkZX1WvQLwSw", "oauth_verifier"=>"1tPWInEBpTxDwtgJWCT2fCucUlNuMUkEN4RvR1IH4Ks"}
+  [1m[36mAuthentication Load (1.6ms)[0m  [1mSELECT "authentications".* FROM "authentications" WHERE "authentications"."provider" = 'twitter' AND "authentications"."uid" = '972732044' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 44ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-05-10 04:43:38 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:38 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:38 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:38 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:38 -0400
+Served asset /nonprofits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:38 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2013-05-10 04:43:38 -0400
+Served asset /authentications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:38 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:38 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:38 -0400
+Served asset /authentications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:38 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:38 -0400
+Served asset /nonprofits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:38 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:38 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-10 04:43:38 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/auth/twitter" for 127.0.0.1 at 2013-05-10 04:44:42 -0400
+
+
+Started GET "/users/auth/twitter/callback?oauth_token=jhu1sv2uWkW1MjyQNgtSS7HtW7UhTi6VXYxrvgnZfw&oauth_verifier=VF18J19WXiuaLsxPFgMu69bvnGK6AhiBixpsiI8QDk" for 127.0.0.1 at 2013-05-10 04:44:46 -0400
+Processing by AuthenticationsController#twitter as HTML
+  Parameters: {"oauth_token"=>"jhu1sv2uWkW1MjyQNgtSS7HtW7UhTi6VXYxrvgnZfw", "oauth_verifier"=>"VF18J19WXiuaLsxPFgMu69bvnGK6AhiBixpsiI8QDk"}
+  [1m[35mAuthentication Load (0.5ms)[0m  SELECT "authentications".* FROM "authentications" WHERE "authentications"."provider" = 'twitter' AND "authentications"."uid" = '972732044' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 69ms (ActiveRecord: 14.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-05-10 04:44:47 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 04:44:47 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-05-10 04:44:47 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.css?body=1" for 127.0.0.1 at 2013-05-10 04:44:47 -0400
+Served asset /nonprofits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-05-10 04:44:47 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2013-05-10 04:44:47 -0400
+Served asset /authentications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-10 04:44:47 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-10 04:44:47 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-10 04:44:47 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2013-05-10 04:44:47 -0400
+Served asset /authentications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-05-10 04:44:47 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-05-10 04:44:47 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.js?body=1" for 127.0.0.1 at 2013-05-10 04:44:47 -0400
+Served asset /nonprofits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-10 04:44:47 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-10 04:44:47 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateItems (20130509230730)
+Migrating to CreateCategories (20130509231318)
+Migrating to CreateNonprofits (20130510000338)
+Migrating to DeviseCreateUsers (20130510003322)
+Migrating to CreateAuthentications (20130510005415)
+Migrating to AddTokenAndDropKeySecretFromAuthentications (20130510034501)
+Migrating to AddSecretToAuthentications (20130510084958)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (27.2ms)[0m  [1mALTER TABLE "authentications" ADD COLUMN "secret" character varying(255)[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130510084958')
+  [1m[36m (852.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+
+
+Started GET "/users/auth/twitter" for 127.0.0.1 at 2013-05-10 04:58:29 -0400
+
+
+Started GET "/users/auth/twitter/callback?oauth_token=9cmfd61YJdKDAjVICEs81vRsQNcvSg4p2DQQ8hycQJE&oauth_verifier=CbWRSkedRJRadtJnwIO2raYgfvc5N0879BWmOy77g" for 127.0.0.1 at 2013-05-10 04:58:32 -0400
+Processing by AuthenticationsController#twitter as HTML
+  Parameters: {"oauth_token"=>"9cmfd61YJdKDAjVICEs81vRsQNcvSg4p2DQQ8hycQJE", "oauth_verifier"=>"CbWRSkedRJRadtJnwIO2raYgfvc5N0879BWmOy77g"}
+  [1m[36mAuthentication Load (1.8ms)[0m  [1mSELECT "authentications".* FROM "authentications" WHERE "authentications"."provider" = 'twitter' AND "authentications"."uid" = '972732044' LIMIT 1[0m
+Completed 500 Internal Server Error in 172ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: secret):
+  app/models/user.rb:16:in `apply_omniauth'
+  app/controllers/authentications_controller.rb:37:in `twitter'
+
+
+  Rendered /Users/dylandrop/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/dylandrop/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/dylandrop/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.2ms)
+
+
+Started GET "/users/auth/twitter" for 127.0.0.1 at 2013-05-10 05:01:32 -0400
+
+
+Started GET "/users/auth/twitter/callback?oauth_token=ZsOm6bVBo0iJ6dWsq0LdBLO5F86QHGoToEknsSMmdY&oauth_verifier=hOBuvT69cV3DHUCl1nJ9i27qem2xtdIaw3uCPFCZKo" for 127.0.0.1 at 2013-05-10 05:01:36 -0400
+Processing by AuthenticationsController#twitter as HTML
+  Parameters: {"oauth_token"=>"ZsOm6bVBo0iJ6dWsq0LdBLO5F86QHGoToEknsSMmdY", "oauth_verifier"=>"hOBuvT69cV3DHUCl1nJ9i27qem2xtdIaw3uCPFCZKo"}
+  [1m[35mAuthentication Load (0.7ms)[0m  SELECT "authentications".* FROM "authentications" WHERE "authentications"."provider" = 'twitter' AND "authentications"."uid" = '972732044' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 124ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-05-10 05:01:37 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 139ms (Views: 137.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 05:01:37 -0400
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2013-05-10 05:01:37 -0400
+Served asset /authentications.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/nonprofits.css?body=1" for 127.0.0.1 at 2013-05-10 05:01:37 -0400
+Served asset /nonprofits.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-05-10 05:01:37 -0400
+Served asset /items.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-10 05:01:37 -0400
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-05-10 05:01:37 -0400
+Served asset /categories.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-10 05:01:37 -0400
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/nonprofits.js?body=1" for 127.0.0.1 at 2013-05-10 05:01:37 -0400
+Served asset /nonprofits.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2013-05-10 05:01:37 -0400
+Served asset /authentications.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-05-10 05:01:37 -0400
+Served asset /categories.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-05-10 05:01:37 -0400
+Served asset /items.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-10 05:01:37 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-10 05:01:37 -0400
+Served asset /users.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-10 05:01:37 -0400
+Served asset /application.js - 304 Not Modified (13ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-05-10 06:49:55 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (118.3ms)
+Completed 200 OK in 604ms (Views: 468.8ms | ActiveRecord: 31.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 06:49:56 -0400
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-05-10 06:49:56 -0400
+Served asset /categories.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2013-05-10 06:49:56 -0400
+Served asset /authentications.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-05-10 06:49:56 -0400
+Served asset /items.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-05-10 06:49:56 -0400
+Served asset /categories.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-10 06:49:56 -0400
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-05-10 06:49:56 -0400
+Served asset /items.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-10 06:49:56 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-10 06:49:57 -0400
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2013-05-10 06:49:57 -0400
+Served asset /authentications.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/nonprofits.css?body=1" for 127.0.0.1 at 2013-05-10 06:49:57 -0400
+Served asset /nonprofits.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-10 06:49:57 -0400
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/nonprofits.js?body=1" for 127.0.0.1 at 2013-05-10 06:49:57 -0400
+Served asset /nonprofits.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-10 06:49:57 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/users/auth/twitter" for 127.0.0.1 at 2013-05-10 06:50:00 -0400
+
+
+Started GET "/users/auth/twitter/callback?oauth_token=5DNRPhQLhU9KfAgnLNFDnI0yMoWd56vTqO8mQ1Heqck&oauth_verifier=ZVvyngGqeip1wevpExcsqp3J8DT628xppbtwKNW2CkI" for 127.0.0.1 at 2013-05-10 06:50:04 -0400
+
+ActionController::RoutingError (undefined method `alias_action' for AuthenticationsController:Class):
+  app/controllers/authentications_controller.rb:2:in `<class:AuthenticationsController>'
+  app/controllers/authentications_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/dylandrop/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/auth/twitter" for 127.0.0.1 at 2013-05-10 06:52:03 -0400
+
+
+Started GET "/users/auth/twitter/callback?oauth_token=A6CbluH8i05EPMh4O3EYcnbXABHBK8bAz4ieMgMgAU&oauth_verifier=YHnI1vagODpT2vSI0qzitgfZi6Ai5gIYk3VST1XXnG8" for 127.0.0.1 at 2013-05-10 06:52:06 -0400
+Processing by AuthenticationsController#twitter as HTML
+  Parameters: {"oauth_token"=>"A6CbluH8i05EPMh4O3EYcnbXABHBK8bAz4ieMgMgAU", "oauth_verifier"=>"YHnI1vagODpT2vSI0qzitgfZi6Ai5gIYk3VST1XXnG8"}
+  [1m[36mAuthentication Load (1.7ms)[0m  [1mSELECT "authentications".* FROM "authentications" WHERE "authentications"."provider" = 'twitter' AND "authentications"."uid" = '972732044' LIMIT 1[0m
+Redirected to http://localhost:3000/users/new
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authentications".* FROM "authentications" WHERE "authentications"."provider" = 'twitter' AND "authentications"."uid" = '972732044' LIMIT 1
+Redirected to 
+Completed 500 Internal Server Error in 147ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/authentications_controller.rb:16:in `facebook'
+  app/controllers/authentications_controller.rb:22:in `twitter'
+
+
+  Rendered /Users/dylandrop/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/dylandrop/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/dylandrop/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.0ms)
+
+
+Started GET "/users/auth/twitter" for 127.0.0.1 at 2013-05-10 06:53:18 -0400
+
+
+Started GET "/users/auth/twitter/callback?oauth_token=TWWH6Z0f4wmDOInarXKEsnc62sguSr126imI5Iyn0&oauth_verifier=hxopx1WeHXqqup9AXZiwRdF7HYKld6hoGN0g0TqxU" for 127.0.0.1 at 2013-05-10 06:53:21 -0400
+Processing by AuthenticationsController#twitter as HTML
+  Parameters: {"oauth_token"=>"TWWH6Z0f4wmDOInarXKEsnc62sguSr126imI5Iyn0", "oauth_verifier"=>"hxopx1WeHXqqup9AXZiwRdF7HYKld6hoGN0g0TqxU"}
+  [1m[36mAuthentication Load (0.5ms)[0m  [1mSELECT "authentications".* FROM "authentications" WHERE "authentications"."provider" = 'twitter' AND "authentications"."uid" = '972732044' LIMIT 1[0m
+Redirected to http://localhost:3000/users/new
+Completed 500 Internal Server Error in 105ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/authentications_controller.rb:21:in `twitter'
+
+
+  Rendered /Users/dylandrop/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/dylandrop/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/dylandrop/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.5ms)
+
+
+Started GET "/users/auth/twitter" for 127.0.0.1 at 2013-05-10 06:53:41 -0400
+
+
+Started GET "/users/auth/twitter/callback?oauth_token=pMQP6igKHqirC1zbYjoB5GywutG7nEq6teAloqpDU0&oauth_verifier=bTrILApAKElDZsGKqRY339tIc3ZJyu9ZIcpLH0bg" for 127.0.0.1 at 2013-05-10 06:53:52 -0400
+Processing by AuthenticationsController#twitter as HTML
+  Parameters: {"oauth_token"=>"pMQP6igKHqirC1zbYjoB5GywutG7nEq6teAloqpDU0", "oauth_verifier"=>"bTrILApAKElDZsGKqRY339tIc3ZJyu9ZIcpLH0bg"}
+  [1m[35mAuthentication Load (0.5ms)[0m  SELECT "authentications".* FROM "authentications" WHERE "authentications"."provider" = 'twitter' AND "authentications"."uid" = '972732044' LIMIT 1
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 106ms (ActiveRecord: 14.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-05-10 06:53:53 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 06:53:53 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2013-05-10 06:53:53 -0400
+Served asset /authentications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.css?body=1" for 127.0.0.1 at 2013-05-10 06:53:53 -0400
+Served asset /nonprofits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-05-10 06:53:53 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-05-10 06:53:53 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-10 06:53:53 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-10 06:53:53 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2013-05-10 06:53:53 -0400
+Served asset /authentications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-10 06:53:53 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-05-10 06:53:53 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-05-10 06:53:53 -0400
+Served asset /items.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/nonprofits.js?body=1" for 127.0.0.1 at 2013-05-10 06:53:53 -0400
+Served asset /nonprofits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-10 06:53:53 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-10 06:53:53 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-05-10 06:54:39 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PG3/IyguZPpcCDLOLFRc3ebbaW1OCCQcX4N/ZYlx5v4=", "user"=>{"email"=>"dylandrop@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'dylandrop@gmail.com' LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 269ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 06:54:39 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2013-05-10 06:54:39 -0400
+Served asset /authentications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-05-10 06:54:39 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-05-10 06:54:39 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.css?body=1" for 127.0.0.1 at 2013-05-10 06:54:39 -0400
+Served asset /nonprofits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-10 06:54:39 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-10 06:54:40 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-05-10 06:54:40 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-05-10 06:54:40 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.js?body=1" for 127.0.0.1 at 2013-05-10 06:54:40 -0400
+Served asset /nonprofits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-10 06:54:40 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2013-05-10 06:54:40 -0400
+Served asset /authentications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-10 06:54:40 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-10 06:54:40 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-05-10 06:54:56 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PG3/IyguZPpcCDLOLFRc3ebbaW1OCCQcX4N/ZYlx5v4=", "user"=>{"email"=>"dylandrop@something.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'dylandrop@something.com' LIMIT 1[0m
+  [1m[35mSQL (29.4ms)[0m  INSERT INTO "users" ("admin", "city", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "first_name", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "state", "street_address", "updated_at", "zipcode") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"  [["admin", "f"], ["city", nil], ["created_at", Fri, 10 May 2013 10:54:56 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "dylandrop@something.com"], ["encrypted_password", "$2a$10$cc8hu7W023v3C4t9hNs1NOn8uHIOF02OPh3K/QrQTWgGaTB5MMd.G"], ["first_name", nil], ["last_name", nil], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["state", nil], ["street_address", nil], ["updated_at", Fri, 10 May 2013 10:54:56 UTC +00:00], ["zipcode", nil]]
+  [1m[36m (929.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (91.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2013-05-10 10:54:57.691566', "current_sign_in_at" = '2013-05-10 10:54:57.691566', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2013-05-10 10:54:57.693092' WHERE "users"."id" = 6[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 1155ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-10 06:54:57 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (1.0ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  [1m[35mCategory Load (0.8ms)[0m  SELECT "categories".* FROM "categories" 
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  Rendered items/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 141ms (Views: 28.0ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 06:54:58 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-05-10 06:54:58 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-05-10 06:54:58 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.css?body=1" for 127.0.0.1 at 2013-05-10 06:54:58 -0400
+Served asset /nonprofits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2013-05-10 06:54:58 -0400
+Served asset /authentications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-10 06:54:58 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-05-10 06:54:58 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-10 06:54:58 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-10 06:54:58 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2013-05-10 06:54:58 -0400
+Served asset /authentications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-05-10 06:54:58 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-10 06:54:58 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.js?body=1" for 127.0.0.1 at 2013-05-10 06:54:58 -0400
+Served asset /nonprofits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-10 06:54:58 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started DELETE "/users/logout" for 127.0.0.1 at 2013-05-10 06:58:14 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PG3/IyguZPpcCDLOLFRc3ebbaW1OCCQcX4N/ZYlx5v4="}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 25ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-10 06:58:14 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered items/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 110ms (Views: 16.5ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-05-10 06:58:14 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2013-05-10 06:58:14 -0400
+Served asset /authentications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-05-10 06:58:14 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.css?body=1" for 127.0.0.1 at 2013-05-10 06:58:14 -0400
+Served asset /nonprofits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-10 06:58:14 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 06:58:14 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-10 06:58:14 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2013-05-10 06:58:14 -0400
+Served asset /authentications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-05-10 06:58:14 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-10 06:58:14 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-05-10 06:58:14 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-10 06:58:14 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.js?body=1" for 127.0.0.1 at 2013-05-10 06:58:14 -0400
+Served asset /nonprofits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-10 06:58:14 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/users/login" for 127.0.0.1 at 2013-05-10 07:04:45 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (20.4ms)
+Compiled registrations.css  (69ms)  (pid 13501)
+Compiled application.css  (82ms)  (pid 13501)
+Compiled registrations.js  (428ms)  (pid 13501)
+Compiled application.js  (439ms)  (pid 13501)
+Completed 200 OK in 862ms (Views: 770.3ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/assets/registrations.css?body=1" for 127.0.0.1 at 2013-05-10 07:04:46 -0400
+Served asset /registrations.css - 200 OK (2ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-05-10 07:04:46 -0400
+Served asset /categories.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2013-05-10 07:04:46 -0400
+Served asset /authentications.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-10 07:04:46 -0400
+Served asset /users.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-05-10 07:04:46 -0400
+Served asset /items.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 07:04:46 -0400
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/nonprofits.css?body=1" for 127.0.0.1 at 2013-05-10 07:04:46 -0400
+Served asset /nonprofits.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2013-05-10 07:04:46 -0400
+Served asset /registrations.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-10 07:04:46 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-10 07:04:46 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (27ms)
+
+
+Started GET "/assets/nonprofits.js?body=1" for 127.0.0.1 at 2013-05-10 07:04:46 -0400
+Served asset /nonprofits.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2013-05-10 07:04:46 -0400
+Served asset /authentications.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-05-10 07:04:46 -0400
+Served asset /categories.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-05-10 07:04:46 -0400
+Served asset /items.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-10 07:04:46 -0400
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-10 07:04:46 -0400
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/users/auth/twitter" for 127.0.0.1 at 2013-05-10 07:04:49 -0400
+
+
+Started GET "/users/auth/twitter/callback?oauth_token=SWSHdTmAIlOPYaHmytwBwVjR6Zp9hFKkiiAUIgEkig&oauth_verifier=N9XbkaBovs64U1EVlKySgeOu5ZTYZsm19VsVxEW0Cw" for 127.0.0.1 at 2013-05-10 07:04:53 -0400
+Processing by AuthenticationsController#twitter as HTML
+  Parameters: {"oauth_token"=>"SWSHdTmAIlOPYaHmytwBwVjR6Zp9hFKkiiAUIgEkig", "oauth_verifier"=>"N9XbkaBovs64U1EVlKySgeOu5ZTYZsm19VsVxEW0Cw"}
+  [1m[36mAuthentication Load (1.7ms)[0m  [1mSELECT "authentications".* FROM "authentications" WHERE "authentications"."provider" = 'twitter' AND "authentications"."uid" = '972732044' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 99ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-05-10 07:04:54 -0400
+Processing by RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-05-10 07:04:54 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.css?body=1" for 127.0.0.1 at 2013-05-10 07:04:54 -0400
+Served asset /nonprofits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-10 07:04:54 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-05-10 07:04:54 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 07:04:54 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2013-05-10 07:04:54 -0400
+Served asset /authentications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-10 07:04:54 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-10 07:04:54 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-05-10 07:04:54 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2013-05-10 07:04:54 -0400
+Served asset /authentications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-10 07:04:54 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.js?body=1" for 127.0.0.1 at 2013-05-10 07:04:54 -0400
+Served asset /nonprofits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-05-10 07:04:54 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-10 07:04:54 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-05-10 07:05:14 -0400
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"voE1lRcHBQ4DFYb8dZdbvYmG4Rsv9jRfKgYsEJlXllM=", "user"=>{"email"=>"dylandrop@gmail2.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mUser Exists (1.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'dylandrop@gmail2.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'dylandrop@gmail2.com' LIMIT 1
+  [1m[36mSQL (3.5ms)[0m  [1mINSERT INTO "users" ("admin", "city", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "first_name", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "state", "street_address", "updated_at", "zipcode") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["admin", "f"], ["city", nil], ["created_at", Fri, 10 May 2013 11:05:14 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "dylandrop@gmail2.com"], ["encrypted_password", "$2a$10$9nfV61adxpjtsnjG86pDx.7ArL8wz9vJJXbY/v.6cBLjcTDV9KXAO"], ["first_name", nil], ["last_name", nil], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["state", nil], ["street_address", nil], ["updated_at", Fri, 10 May 2013 11:05:14 UTC +00:00], ["zipcode", nil]]
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "authentications" ("code", "created_at", "provider", "secret", "token", "uid", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["code", nil], ["created_at", Fri, 10 May 2013 11:05:14 UTC +00:00], ["provider", "twitter"], ["secret", "z5ArgWRwxuTbc3XFWkMvtEwD88kZ0ivesurKJNWyeOc"], ["token", "972732044-3GLTWP1bFT1JwhT6Geh37FI8qfOFRzhsmMQx7m4z"], ["uid", "972732044"], ["updated_at", Fri, 10 May 2013 11:05:14 UTC +00:00], ["user_id", 7]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2013-05-10 11:05:14.777939', "current_sign_in_at" = '2013-05-10 11:05:14.777939', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2013-05-10 11:05:14.779326' WHERE "users"."id" = 7[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 132ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-10 07:05:14 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (1.0ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  [1m[35mCategory Load (0.6ms)[0m  SELECT "categories".* FROM "categories" 
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1[0m
+  Rendered items/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 58ms (Views: 16.7ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 07:05:14 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.css?body=1" for 127.0.0.1 at 2013-05-10 07:05:14 -0400
+Served asset /nonprofits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registrations.css?body=1" for 127.0.0.1 at 2013-05-10 07:05:14 -0400
+Served asset /registrations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2013-05-10 07:05:14 -0400
+Served asset /authentications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-05-10 07:05:14 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-05-10 07:05:15 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-10 07:05:15 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-10 07:05:15 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-10 07:05:15 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2013-05-10 07:05:15 -0400
+Served asset /authentications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-05-10 07:05:15 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2013-05-10 07:05:15 -0400
+Served asset /registrations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-05-10 07:05:15 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nonprofits.js?body=1" for 127.0.0.1 at 2013-05-10 07:05:15 -0400
+Served asset /nonprofits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-10 07:05:15 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-10 07:05:15 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
