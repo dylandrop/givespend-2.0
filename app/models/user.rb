@@ -7,5 +7,15 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :zipcode, :state, :city, :street_address, :first_name, :last_name
-  # attr_accessible :title, :body
+  
+  has_many :authentications
+
+  def apply_omniauth(omniauth)
+    self.email = omniauth['extra']['raw_info']['email'] if omniauth['provider'] == 'facebook'
+    authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'], :token=> omniauth['credentials']['token'])
+  end
+
+  def password_required?
+    (authentications.empty? || !password.blank?) && super
+  end
 end
