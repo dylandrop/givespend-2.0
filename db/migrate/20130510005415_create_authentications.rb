@@ -4,9 +4,8 @@ class CreateAuthentications < ActiveRecord::Migration
       t.belongs_to :user
       t.string :provider
       t.string :uid
-      t.string :key
+      t.string :token
       t.string :secret
-      t.string :code
 
       t.timestamps
     end

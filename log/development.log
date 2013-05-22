@@ -13996,3 +13996,164 @@ Served asset /users.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-10 12:32:28 -0400
 Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (143.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (1.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateItems (20130509230730)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (40.5ms)[0m  [1mCREATE TABLE "items" ("id" serial primary key, "name" character varying(255), "charity_id" integer, "cart_id" integer, "category_id" integer, "price" integer, "description" text, "percentage" integer, "user_id" integer, "purchased_at" date, "expires_from_cart_at" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (5.9ms)[0m  CREATE INDEX "index_items_on_charity_id" ON "items" ("charity_id")
+  [1m[36m (1.5ms)[0m  [1mCREATE INDEX "index_items_on_cart_id" ON "items" ("cart_id")[0m
+  [1m[35m (1.3ms)[0m  CREATE INDEX "index_items_on_category_id" ON "items" ("category_id")
+  [1m[36m (1.6ms)[0m  [1mCREATE INDEX "index_items_on_user_id" ON "items" ("user_id")[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130509230730')
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCategories (20130509231318)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (27.6ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "name" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (32.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130509231318')
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateNonprofits (20130510000338)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (12.4ms)[0m  [1mCREATE TABLE "nonprofits" ("id" serial primary key, "name" character varying(255), "website" character varying(255), "email" character varying(255), "info" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130510000338')
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateUsers (20130510003322)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (28.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "first_name" character varying(255), "last_name" character varying(255), "street_address" character varying(255), "zipcode" integer, "state" character varying(255), "city" character varying(255), "admin" character varying(255) DEFAULT 'f', "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.3ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130510003322')
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateAuthentications (20130510005415)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (8.0ms)[0m  [1mCREATE TABLE "authentications" ("id" serial primary key, "user_id" integer, "provider" character varying(255), "uid" character varying(255), "key" character varying(255), "secret" character varying(255), "code" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  CREATE INDEX "index_authentications_on_user_id" ON "authentications" ("user_id")
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130510005415')[0m
+  [1m[35m (1.0ms)[0m  COMMIT
+Migrating to AddTokenAndDropKeySecretFromAuthentications (20130510034501)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "authentications" ADD COLUMN "token" character varying(255)
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "authentications" DROP "key"[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "authentications" DROP "secret"
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130510034501')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to AddSecretToAuthentications (20130510084958)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "authentications" ADD COLUMN "secret" character varying(255)
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130510084958')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to CreateCarts (20130511032641)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (29.2ms)[0m  CREATE TABLE "carts" ("id" serial primary key, "user_id" integer, "purchased_at" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE INDEX "index_carts_on_user_id" ON "carts" ("user_id")[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130511032641')
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to RemoveCartIdFromItems (20130511180825)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "items" DROP "cart_id"[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130511180825')
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCartItems (20130511181104)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (29.0ms)[0m  [1mCREATE TABLE "cart_items" ("id" serial primary key, "cart_id" integer, "item_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE INDEX "index_cart_items_on_cart_id" ON "cart_items" ("cart_id")
+  [1m[36m (1.2ms)[0m  [1mCREATE INDEX "index_cart_items_on_item_id" ON "cart_items" ("item_id")[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130511181104')
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (63.9ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Wed, 22 May 2013 23:30:29 UTC +00:00], ["name", "books"], ["updated_at", Wed, 22 May 2013 23:30:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Wed, 22 May 2013 23:30:29 UTC +00:00], ["name", "clothing"], ["updated_at", Wed, 22 May 2013 23:30:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Wed, 22 May 2013 23:30:29 UTC +00:00], ["name", "games"], ["updated_at", Wed, 22 May 2013 23:30:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Wed, 22 May 2013 23:30:29 UTC +00:00], ["name", "movies"], ["updated_at", Wed, 22 May 2013 23:30:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Wed, 22 May 2013 23:30:29 UTC +00:00], ["name", "music"], ["updated_at", Wed, 22 May 2013 23:30:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Wed, 22 May 2013 23:30:29 UTC +00:00], ["name", "textbooks"], ["updated_at", Wed, 22 May 2013 23:30:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Wed, 22 May 2013 23:30:29 UTC +00:00], ["name", "miscellaneous"], ["updated_at", Wed, 22 May 2013 23:30:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Connecting to database specified by database.yml
+  [1m[36m (5.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateItems (20130509230730)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (7.9ms)[0m  [1mCREATE TABLE "items" ("id" serial primary key, "name" character varying(255), "charity_id" integer, "category_id" integer, "price" integer, "description" text, "percentage" integer, "user_id" integer, "purchased_at" date, "expires_from_cart_at" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  CREATE INDEX "index_items_on_charity_id" ON "items" ("charity_id")
+  [1m[36m (1.3ms)[0m  [1mCREATE INDEX "index_items_on_category_id" ON "items" ("category_id")[0m
+  [1m[35m (1.1ms)[0m  CREATE INDEX "index_items_on_user_id" ON "items" ("user_id")
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130509230730')[0m
+  [1m[35m (1.3ms)[0m  COMMIT
+Migrating to CreateCategories (20130509231318)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.4ms)[0m  CREATE TABLE "categories" ("id" serial primary key, "name" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130509231318')[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+Migrating to CreateNonprofits (20130510000338)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (6.7ms)[0m  CREATE TABLE "nonprofits" ("id" serial primary key, "name" character varying(255), "website" character varying(255), "email" character varying(255), "info" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130510000338')[0m
+  [1m[35m (0.9ms)[0m  COMMIT
+Migrating to DeviseCreateUsers (20130510003322)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (7.2ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "first_name" character varying(255), "last_name" character varying(255), "street_address" character varying(255), "zipcode" integer, "state" character varying(255), "city" character varying(255), "admin" character varying(255) DEFAULT 'f', "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130510003322')[0m
+  [1m[35m (1.3ms)[0m  COMMIT
+Migrating to CreateAuthentications (20130510005415)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (5.7ms)[0m  CREATE TABLE "authentications" ("id" serial primary key, "user_id" integer, "provider" character varying(255), "uid" character varying(255), "token" character varying(255), "secret" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.5ms)[0m  [1mCREATE INDEX "index_authentications_on_user_id" ON "authentications" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130510005415')
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCarts (20130511032641)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (5.4ms)[0m  [1mCREATE TABLE "carts" ("id" serial primary key, "user_id" integer, "purchased_at" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.7ms)[0m  CREATE INDEX "index_carts_on_user_id" ON "carts" ("user_id")
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130511032641')[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+Migrating to CreateCartItems (20130511181104)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.2ms)[0m  CREATE TABLE "cart_items" ("id" serial primary key, "cart_id" integer, "item_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.8ms)[0m  [1mCREATE INDEX "index_cart_items_on_cart_id" ON "cart_items" ("cart_id")[0m
+  [1m[35m (1.4ms)[0m  CREATE INDEX "index_cart_items_on_item_id" ON "cart_items" ("item_id")
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130511181104')[0m
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.9ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Wed, 22 May 2013 23:34:49 UTC +00:00], ["name", "books"], ["updated_at", Wed, 22 May 2013 23:34:49 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Wed, 22 May 2013 23:34:49 UTC +00:00], ["name", "clothing"], ["updated_at", Wed, 22 May 2013 23:34:49 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Wed, 22 May 2013 23:34:49 UTC +00:00], ["name", "games"], ["updated_at", Wed, 22 May 2013 23:34:49 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Wed, 22 May 2013 23:34:49 UTC +00:00], ["name", "movies"], ["updated_at", Wed, 22 May 2013 23:34:49 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Wed, 22 May 2013 23:34:49 UTC +00:00], ["name", "music"], ["updated_at", Wed, 22 May 2013 23:34:49 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Wed, 22 May 2013 23:34:49 UTC +00:00], ["name", "textbooks"], ["updated_at", Wed, 22 May 2013 23:34:49 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Wed, 22 May 2013 23:34:49 UTC +00:00], ["name", "miscellaneous"], ["updated_at", Wed, 22 May 2013 23:34:49 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m

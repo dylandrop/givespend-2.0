@@ -3,7 +3,6 @@ class CreateItems < ActiveRecord::Migration
     create_table :items do |t|
       t.string :name
       t.belongs_to :charity
-      t.belongs_to :cart
       t.belongs_to :category
       t.integer :price
       t.text :description
@@ -15,7 +14,6 @@ class CreateItems < ActiveRecord::Migration
       t.timestamps
     end
     add_index :items, :charity_id
-    add_index :items, :cart_id
     add_index :items, :category_id
     add_index :items, :user_id
   end
