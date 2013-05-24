@@ -1,0 +1,4 @@
+<% current_cart.items.each do |item| %>
+  <%= item.name %><br>
+  <%= cents_to_dollars(item.price) %><br><br>
+<% end %>

@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :zipcode, :state, :city, :street_address, :first_name, :last_name, :charity_id, :category_id
   
   has_many :authentications
+  has_many :carts
 
   def apply_omniauth(omniauth)
     self.email = omniauth['extra']['raw_info']['email'] if omniauth['provider'] == 'facebook'

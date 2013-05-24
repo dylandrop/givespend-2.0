@@ -9,5 +9,13 @@ Givespend::Application.routes.draw do
   resources :nonprofits, only: [:index, :show]
   resources :items, only: [:index,:new,:create,:show]
   resources :categories, only: [:show]
+  resources :carts do
+    collection do
+      get :show
+      post :add
+      delete :remove
+      post :checkout
+    end
+  end
   root :to => "items#index"
 end
