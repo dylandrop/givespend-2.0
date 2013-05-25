@@ -1,4 +1,4 @@
-<%= form_tag({controller: 'carts', action: 'checkout'}, id: "checkout_card_form") %>
+<%= form_tag({controller: 'transactions', action: 'create'}, method: :post, id: "checkout_card_form") %>
   <%= hidden_field_tag :stripe_card_token %>
   <div class="field">
     <%= label_tag :email %>

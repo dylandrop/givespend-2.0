@@ -17,5 +17,6 @@ Givespend::Application.routes.draw do
       post :checkout
     end
   end
+  resources :transactions, only: [:show, :create, :index]
   root :to => "items#index"
 end

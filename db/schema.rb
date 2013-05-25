@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130523062602) do
+ActiveRecord::Schema.define(:version => 20130525012046) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -76,6 +76,16 @@ ActiveRecord::Schema.define(:version => 20130523062602) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "transactions", :force => true do |t|
+    t.integer  "cart_id"
+    t.string   "status"
+    t.string   "stripe_customer_token"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+  end
+
+  add_index "transactions", ["cart_id"], :name => "index_transactions_on_cart_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",  :null => false

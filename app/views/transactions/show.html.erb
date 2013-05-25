@@ -1,0 +1,5 @@
+<%= @transaction.status %><br><br>
+<% @transaction.cart.items.each do |item| %>
+  <%= item.name %><br>
+  <%= item.price %><br><br>
+<% end %>
