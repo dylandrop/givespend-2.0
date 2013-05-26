@@ -17,4 +17,8 @@ class Transaction < ActiveRecord::Base
     errors.add :base, "There was a problem with your credit card."
     false
   end
+
+  def self.purchase_items_via_stripe
+    puts "OK!"
+  end
 end

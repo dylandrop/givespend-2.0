@@ -12,6 +12,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-stripe-connect'
 gem 'stripe'
+gem 'queue_classic'
 
 # Gems used only for assets and not required
 # in production environments by default.
