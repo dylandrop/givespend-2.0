@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   
   has_many :authentications
   has_many :carts
+  has_many :items
 
   def apply_omniauth(omniauth)
     self.email = omniauth['extra']['raw_info']['email'] if omniauth['provider'] == 'facebook'
