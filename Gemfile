@@ -28,6 +28,15 @@ end
 
 gem 'jquery-rails'
 
+group :test do
+  gem 'database_cleaner'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'cucumber-rails'
+  gem 'capybara'
+  gem "capybara-webkit", '~> 0.13', require: false
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

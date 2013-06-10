@@ -7,6 +7,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(params[:item])
+    @item.seller = current_user
     if @item.save
       flash[:notice] = "Item listed."
       redirect_to items_path(@item)

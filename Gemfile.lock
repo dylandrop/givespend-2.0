@@ -28,9 +28,22 @@ GEM
     activesupport (3.2.11)
       i18n (~> 0.6)
       multi_json (~> 1.0)
+    addressable (2.3.4)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
     builder (3.0.4)
+    capybara (1.1.2)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      selenium-webdriver (~> 2.0)
+      xpath (~> 0.1.4)
+    capybara-webkit (0.13.0)
+      capybara (>= 1.0.0, < 1.2)
+      json
+    childprocess (0.3.3)
+      ffi (~> 1.0.6)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -38,16 +51,35 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
+    cucumber (1.2.1)
+      builder (>= 2.1.2)
+      diff-lcs (>= 1.1.3)
+      gherkin (~> 2.11.0)
+      json (>= 1.4.6)
+    cucumber-rails (1.3.0)
+      capybara (>= 1.1.2)
+      cucumber (>= 1.1.8)
+      nokogiri (>= 1.5.0)
+    database_cleaner (0.8.0)
     devise (2.1.0)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.7)
       railties (~> 3.1)
       warden (~> 1.1.1)
+    diff-lcs (1.1.3)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    factory_girl (3.3.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (3.3.0)
+      factory_girl (~> 3.3.0)
+      railties (>= 3.0.0)
     faraday (0.8.7)
       multipart-post (~> 1.1)
+    ffi (1.0.11)
+    gherkin (2.11.1)
+      json (>= 1.4.6)
     hashie (2.0.4)
     hike (1.2.2)
     httpauth (0.2.0)
@@ -59,6 +91,8 @@ GEM
     json (1.7.7)
     jwt (0.1.8)
       multi_json (>= 1.5)
+    libwebsocket (0.1.4)
+      addressable
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -66,6 +100,7 @@ GEM
     mime-types (1.23)
     multi_json (1.7.3)
     multipart-post (1.2.0)
+    nokogiri (1.5.5)
     oauth (0.4.5)
     oauth2 (0.8.1)
       faraday (~> 0.8)
@@ -121,11 +156,30 @@ GEM
       json (~> 1.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    rspec (2.11.0)
+      rspec-core (~> 2.11.0)
+      rspec-expectations (~> 2.11.0)
+      rspec-mocks (~> 2.11.0)
+    rspec-core (2.11.1)
+    rspec-expectations (2.11.3)
+      diff-lcs (~> 1.1.3)
+    rspec-mocks (2.11.3)
+    rspec-rails (2.11.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec (~> 2.11.0)
+    rubyzip (0.9.9)
     sass (3.2.8)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+    selenium-webdriver (2.24.0)
+      childprocess (>= 0.2.5)
+      libwebsocket (~> 0.1.3)
+      multi_json (~> 1.0)
+      rubyzip
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -145,13 +199,20 @@ GEM
       multi_json (~> 1.0, >= 1.0.2)
     warden (1.1.1)
       rack (>= 1.0)
+    xpath (0.1.4)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  capybara
+  capybara-webkit (~> 0.13)
   coffee-rails (~> 3.2.1)
+  cucumber-rails
+  database_cleaner
   devise
+  factory_girl_rails
   jquery-rails
   omniauth
   omniauth-facebook
@@ -160,6 +221,7 @@ DEPENDENCIES
   pg
   queue_classic
   rails (= 3.2.11)
+  rspec-rails
   sass-rails (~> 3.2.3)
   stripe
   uglifier (>= 1.0.3)

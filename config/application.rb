@@ -59,5 +59,10 @@ module Givespend
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.app_generators do |c|
+      c.test_framework :rspec, :views => false, :fixture => true
+      c.fixture_replacement :factory_girl, :dir => 'spec/factories'
+    end
   end
 end
