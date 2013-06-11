@@ -1,12 +1,15 @@
 class Item < ActiveRecord::Base
-  belongs_to :charity
+  belongs_to :nonprofit
   belongs_to :cart
   belongs_to :category
   belongs_to :seller, class_name: "User"
-  attr_accessible :description, :expires_from_cart_at, :name, :percentage, :price, :purchased_at, :category_id, :user, :charity_id, :percentage
+  attr_accessible :description, :expires_from_cart_at, :name, :percentage, :price, :purchased_at, :category_id, :user, :nonprofit_id
   PERCENTAGES = [5,10,15,25,50,75,100]
 
-  before_save :price_to_cents
+  before_validation :price_to_cents
+  validates :nonprofit, :seller, :name, :percentage, :price, :category, presence: true
+  validates :percentage, inclusion: { in: PERCENTAGES }
+  validates :price, numericality: { greater_than_or_equal_to: 100 }
 
   private
 

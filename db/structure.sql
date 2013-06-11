@@ -252,12 +252,12 @@ ALTER SEQUENCE categories_id_seq OWNED BY categories.id;
 CREATE TABLE items (
     id integer NOT NULL,
     name character varying(255),
-    charity_id integer,
+    nonprofit_id integer,
+    seller_id integer,
     category_id integer,
     price integer,
     description text,
     percentage integer,
-    user_id integer,
     purchased_at date,
     expires_from_cart_at date,
     created_at timestamp without time zone NOT NULL,
@@ -652,17 +652,17 @@ CREATE INDEX index_items_on_category_id ON items USING btree (category_id);
 
 
 --
--- Name: index_items_on_charity_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+-- Name: index_items_on_nonprofit_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
-CREATE INDEX index_items_on_charity_id ON items USING btree (charity_id);
+CREATE INDEX index_items_on_nonprofit_id ON items USING btree (nonprofit_id);
 
 
 --
--- Name: index_items_on_user_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+-- Name: index_items_on_seller_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
-CREATE INDEX index_items_on_user_id ON items USING btree (user_id);
+CREATE INDEX index_items_on_seller_id ON items USING btree (seller_id);
 
 
 --

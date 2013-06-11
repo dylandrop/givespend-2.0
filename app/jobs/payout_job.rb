@@ -4,7 +4,7 @@ class PayoutJob < QC::Worker
     items = transaction.cart.items
     items.each do |item|
       seller_token = item.user.authentications.where(provider: "stripe_connect").uid
-      charity_token = item.charity.token
+      nonprofit_token = item.nonprofit.token
       Stripe::Charge.create ({
           amount: item.price * (1 - percentage / 100.0),
           currency: 'usd',
@@ -16,8 +16,8 @@ class PayoutJob < QC::Worker
           amount: item.price * (percentage / 100.0),
           currency: 'usd',
           card: transaction.stripe_customer_token,
-          description: "Charge for item #{item.id} to charity"},
-          charity_token
+          description: "Charge for item #{item.id} to nonprofit"},
+          nonprofit_token
         )
       item.update_attributes(purchased_at: Time.now)
     end
