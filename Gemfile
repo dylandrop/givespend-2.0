@@ -32,7 +32,8 @@ group :test do
   gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', require: false
+  gem 'pickle'
   gem 'capybara'
   gem "shoulda-matchers"
   gem "capybara-webkit", '~> 0.13', require: false

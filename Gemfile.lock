@@ -126,6 +126,9 @@ GEM
       omniauth-oauth (~> 1.0)
     orm_adapter (0.0.7)
     pg (0.14.0)
+    pickle (0.4.11)
+      cucumber (>= 0.8)
+      rake
     polyglot (0.3.3)
     queue_classic (2.1.0)
       pg (~> 0.14.0)
@@ -221,6 +224,7 @@ DEPENDENCIES
   omniauth-stripe-connect
   omniauth-twitter
   pg
+  pickle
   queue_classic
   rails (= 3.2.11)
   rspec-rails

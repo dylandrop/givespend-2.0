@@ -3,7 +3,7 @@ class Item < ActiveRecord::Base
   belongs_to :cart
   belongs_to :category
   belongs_to :seller, class_name: "User"
-  attr_accessible :description, :expires_from_cart_at, :name, :percentage, :price, :purchased_at, :category_id, :user, :nonprofit_id
+  attr_accessible :description, :expires_from_cart_at, :name, :percentage, :price, :purchased_at, :category_id, :nonprofit_id
   PERCENTAGES = [5,10,15,25,50,75,100]
 
   before_validation :price_to_cents
