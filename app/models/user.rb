@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :zipcode, :state, :city, :street_address, :first_name, :last_name, :charity_id, :category_id
   
-  has_many :authentications
+  has_many :authentications, as: :authenticatable
   has_many :carts
   has_many :items
 

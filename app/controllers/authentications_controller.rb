@@ -7,7 +7,7 @@ class AuthenticationsController < ApplicationController
       flash[:notice] = "Signed in successfully."
       sign_in_and_redirect(:user, authentication.user)
     elsif current_user
-      current_user.authentications.create!(:provider => omniauth['provider'], :uid => omniauth['uid'], :token => omniauth['credentials']['token'])
+      current_user.authentications.create!(auth_hash(omniauth))
       flash[:notice] = "Authentication successful."
       redirect_to authentications_url
     else
@@ -29,8 +29,19 @@ class AuthenticationsController < ApplicationController
 
   def stripe_connect
     omniauth = request.env["omniauth.auth"]
-    current_user.authentications.create!(:provider => omniauth['provider'], :uid => omniauth['uid'], :token => omniauth['credentials']['token'])
-    flash[:notice] = "Authentication successful."
-    redirect_to new_item_url
+    if params['state'].include? 'nonprofit'
+      Nonprofit.find_and_create_auth! params['state'], auth_hash(omniauth)
+      redirect_to items_path, notice: "You're successfully set up with Givespend!"
+    else
+      current_user.authentications.create!(auth_hash(omniauth))
+      flash[:notice] = "Authentication successful."
+      redirect_to new_item_url
+    end
+  end
+
+  private
+
+  def auth_hash omniauth
+    {:provider => omniauth['provider'], :uid => omniauth['uid'], :token => omniauth['credentials']['token']}
   end
 end
