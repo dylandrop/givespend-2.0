@@ -31,3 +31,20 @@ h1 {
   font-weight: 200;
   text-align: center;
 }
+
+.footer {
+  background-color:black;
+  height:30px;
+  padding:10px;
+  position:fixed;
+  left:0;
+  bottom:0;
+  width:100%;
+  z-index: 99999;
+  color: white;
+  font-family: 'Source Sans Pro';
+  vertical-align: middle;
+  font-size: 19px;
+  font-weight: 200;
+  text-align: center;
+}

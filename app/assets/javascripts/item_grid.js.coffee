@@ -48,6 +48,9 @@ class @ItemGrid
         $(window).resize ->
             thisGrid.toGrid()
 
+        if $(window).width() < 900
+            thisGrid.toGrid()
+
     toGrid: () ->
         $(".item-card").each ->
             $(this).css({'top': 'auto','left': 'auto','position':'relative','z-index': 1}).appendTo('#arranged-list')
