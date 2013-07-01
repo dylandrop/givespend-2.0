@@ -6,7 +6,7 @@ class Item < ActiveRecord::Base
   attr_accessible :description, :expires_from_cart_at, :name, :percentage, :price, :purchased_at, :category_id, :nonprofit_id
   PERCENTAGES = [5,10,15,25,50,75,100]
 
-  before_validation :price_to_cents
+  before_create :price_to_cents
   validates :nonprofit, :seller, :name, :percentage, :price, :category, presence: true
   validates :percentage, inclusion: { in: PERCENTAGES }
   validates :price, numericality: { greater_than_or_equal_to: 100 }

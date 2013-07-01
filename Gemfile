@@ -15,6 +15,9 @@ gem 'stripe'
 gem 'queue_classic'
 gem 'activeadmin'
 gem 'pry-rails'
+gem 'pry-remote'
+gem 'pry-stack_explorer'
+gem 'pry-debugger'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -29,6 +32,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 group :test do
   gem 'database_cleaner'

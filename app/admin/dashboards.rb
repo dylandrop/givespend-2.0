@@ -1,15 +1,14 @@
 ActiveAdmin::Dashboards.build do
   section "Recent users" do
     table_for User.last(10) do |t|
-      t.column("Name") { |task| task.name }
+      t.column("Email") { |task| task.email }
     end
   end
  
   section "Recent items" do
     table_for Item.last(10) do |t|
-      t.column("Status") { |task| status_tag (task.is_done ? "Done" : "Pending"), (task.is_done ? :ok : :error) }
       t.column("Name") { |task| task.name }
-      t.column("Price") { |task| item.price }
+      t.column("Price") { |task| task.price }
     end
   end
   # Define your dashboard sections here. Each block will be

@@ -467,7 +467,8 @@ CREATE TABLE transactions (
     status character varying(255),
     stripe_customer_token character varying(255),
     created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL
+    updated_at timestamp without time zone NOT NULL,
+    stripe_card_token character varying(255)
 );
 
 
@@ -874,3 +875,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130616173341');
 INSERT INTO schema_migrations (version) VALUES ('20130616213334');
 
 INSERT INTO schema_migrations (version) VALUES ('20130619213504');
+
+INSERT INTO schema_migrations (version) VALUES ('20130622002838');

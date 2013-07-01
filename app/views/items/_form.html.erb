@@ -1,7 +1,6 @@
 <br/>
 <div id = "new_item_container">
 <%= form_for(@item, :html => { :multipart => true }) do |f| %>
-
   <div id = "item_col">
     <div class="field item-field">
       <%= f.label :price %><br />
@@ -32,7 +31,7 @@
   <div id= "big_item_col" style="margin: 0 auto;margin-bottom:25px"><br/>
     <div align="center" class="item-field">
       <%= f.label :choose_your_nonprofit %><br /><br />
-      <%= f.collection_select( :percentage, Nonprofit.all, :id, :name, {:include_blank => true} ) %>
+      <%= f.collection_select( :nonprofit_id, Nonprofit.all, :id, :name, {:include_blank => true} ) %>
       <span class="user-error-message"><%= full_error_message(@item, :charity_id) %></span>
     </div>
       <div class="item-field" align="center">

@@ -1,8 +1,6 @@
 class Transaction < ActiveRecord::Base
   belongs_to :cart
-  attr_accessible :status, :stripe_customer_token, :cart_id
-
-  attr_accessor :stripe_card_token
+  attr_accessible :status, :stripe_customer_token, :cart_id, :stripe_card_token
 
   def save_with_card
     if valid?

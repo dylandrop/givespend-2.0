@@ -13,3 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require fittext.js
+//= require jquery.ui.all
+
+$(document).ready(function() {
+  $(".title").fitText(0.6, { maxFontSize: '144px'});
+});

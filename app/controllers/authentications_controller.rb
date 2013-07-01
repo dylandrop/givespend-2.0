@@ -29,7 +29,7 @@ class AuthenticationsController < ApplicationController
 
   def stripe_connect
     omniauth = request.env["omniauth.auth"]
-    if params['state'].include? 'nonprofit'
+    if params['state'].try(:include?, 'nonprofit')
       Nonprofit.find_and_create_auth! params['state'], auth_hash(omniauth)
       redirect_to items_path, notice: "You're successfully set up with Givespend!"
     else

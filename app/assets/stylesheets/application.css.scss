@@ -1,0 +1,33 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require bootstrap.min.css
+ *= require_self
+ *= require_tree .
+ *= require jquery.ui.all
+ *= require font-awesome.min.css
+ */
+@font-face {
+  font-family: 'quarkbold';
+  src: url('quark-bold-webfont.eot');
+  src: url('quark-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('quark-bold-webfont.woff') format('woff'),
+       url('quark-bold-webfont.ttf') format('truetype'),
+       url('quark-bold-webfont.svg#quarkbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: 'quarkbold';
+  font-size: 144px;
+  font-weight: 200;
+  text-align: center;
+}
