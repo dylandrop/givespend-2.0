@@ -3,8 +3,11 @@ class Item < ActiveRecord::Base
   belongs_to :cart
   belongs_to :category
   belongs_to :seller, class_name: "User"
+  has_one :image, as: :imageable
+
   attr_accessible :description, :expires_from_cart_at, :name, :percentage, :price, :purchased_at, :category_id, :nonprofit_id
   PERCENTAGES = [5,10,15,25,50,75,100]
+  accepts_nested_attributes_for :image
 
   before_create :price_to_cents
   validates :nonprofit, :seller, :name, :percentage, :price, :category, presence: true

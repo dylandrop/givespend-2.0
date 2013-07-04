@@ -27,7 +27,7 @@ class @ItemGrid
             [first, second] = doubles[i .. i + 1]
             $(first).css('left', coords[counter][0] + initialX)
             $(first).css('top', coords[counter][1] + initialY)
-            $(second).css('left', coords[counter][0] + 20.0 + initialX)
+            $(second).css('left', coords[counter][0] + 40.0 + initialX)
             $(second).css('top', coords[counter][1] + 20.0 + initialY)
             counter++
         for e, i in singles

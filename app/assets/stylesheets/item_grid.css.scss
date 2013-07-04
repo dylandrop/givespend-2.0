@@ -4,6 +4,7 @@
     width: 80%;
     height: 700px;
     text-align: center;
+    margin-top: 35px;
 }
 ul {
     margin: 0;
@@ -56,9 +57,10 @@ ul {
         margin: 5px;
     }
 }
-#sort {
+.paging {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 23px;
+    font-size: 25px;
+    font-weight: 300;
     cursor: pointer;
     padding-bottom: 10px;
     i {
@@ -66,6 +68,15 @@ ul {
         padding-right: 5px;
     }
     span {
-        font-size:28px;
+        padding: 0 4%;
     }
+}
+.sort {
+    font-size: 20px;
+}
+#left {
+    padding-left: 0;
+}
+#right {
+    padding-right: 0;
 }

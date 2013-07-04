@@ -2,6 +2,12 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   helper_method :current_cart
 
+  before_filter :fetch_categories
+
+  def fetch_categories
+    @categories = Category.all
+  end
+
   def current_cart
     if current_user
       if session[:cart_id]

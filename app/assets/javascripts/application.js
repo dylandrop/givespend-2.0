@@ -14,7 +14,9 @@
 //= require jquery_ujs
 //= require_tree .
 //= require fittext.js
-//= require jquery.ui.all
+//= require jquery.ui.core
+//= require jquery.ui.draggable
+//= require jquery.webcam.js
 
 $(document).ready(function() {
   $(".title").fitText(0.6, { maxFontSize: '144px'});

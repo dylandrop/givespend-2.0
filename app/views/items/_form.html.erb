@@ -1,6 +1,6 @@
 <br/>
 <div id = "new_item_container">
-<%= form_for(@item, :html => { :multipart => true }) do |f| %>
+<%= form_for @item do |f| %>
   <div id = "item_col">
     <div class="field item-field">
       <%= f.label :price %><br />
@@ -42,6 +42,17 @@
   </div>
   <br />
   <br />
+  <%= f.fields_for :image, :html => { :multipart => true } do |image_fields| %>
+    <%= f.file_field :content %>
+    <div id="webcam">
+    </div>
+    <div id="capture_images">
+      <%= image_fields.hidden_field :canvas_content %>
+    </div>
+    <div id="capture">Take a picture!</div>
+    <canvas id="canvas" width="320" height="240" style="border:1px solid black"></canvas>
+  <% end %>
+
 
   <div class="actions">
     <br />
@@ -49,3 +60,4 @@
   </div>
 <% end %>
 </div>
+<%= render "webcam" %>

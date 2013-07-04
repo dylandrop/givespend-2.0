@@ -18,6 +18,9 @@ gem 'pry-rails'
 gem 'pry-remote'
 gem 'pry-stack_explorer'
 gem 'pry-debugger'
+gem 'paperclip'
+gem 'aws-sdk'
+gem 'thin'
 
 # Gems used only for assets and not required
 # in production environments by default.
