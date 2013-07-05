@@ -20,6 +20,7 @@ gem 'pry-stack_explorer'
 gem 'pry-debugger'
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'aws-s3'
 gem 'thin'
 
 # Gems used only for assets and not required

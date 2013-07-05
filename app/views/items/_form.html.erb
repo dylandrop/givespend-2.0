@@ -43,7 +43,7 @@
   <br />
   <br />
   <%= f.fields_for :image, :html => { :multipart => true } do |image_fields| %>
-    <%= f.file_field :content %>
+    <%= image_fields.file_field :content %>
     <div id="webcam">
     </div>
     <div id="capture_images">

@@ -13,7 +13,7 @@ class ItemsController < ApplicationController
       flash[:notice] = "Item listed."
       redirect_to items_path(@item)
     else
-      flash[:notice] = "There were issues with your listing."
+      flash[:error] = "There were issues with your listing."
       redirect_to new_item_path(@item)
     end
   end
