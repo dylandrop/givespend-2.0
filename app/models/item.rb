@@ -4,6 +4,7 @@ class Item < ActiveRecord::Base
   belongs_to :category
   belongs_to :seller, class_name: "User"
   has_one :image, as: :imageable
+  after_destroy :clean_image
 
   attr_accessible :description, :expires_from_cart_at, :name, :percentage, :price, :purchased_at, :category_id, :nonprofit_id, :image_attributes
   PERCENTAGES = [5,10,15,25,50,75,100]
@@ -13,6 +14,10 @@ class Item < ActiveRecord::Base
   validates :nonprofit, :seller, :name, :percentage, :price, :category, presence: true
   validates :percentage, inclusion: { in: PERCENTAGES }
   validates :price, numericality: { greater_than_or_equal_to: 100 }
+
+  def clean_image
+    self.image.destroy if self.image
+  end
 
   private
 

@@ -1,7 +1,18 @@
 <div class="row">
-  <div class="span1 pull-right"></div> 
+  <div class="span1"></div>
+  <div class="span3">
+    <h1 class="title"><%= link_to image_tag('givespend-banner.png'), root_path %></h1>
+  </div> 
   <div class="span2 pull-right" id="login-controls">
-    <span>SIGN IN</span>
+    <span>
+      <% if current_user %>
+        <%= link_to "SIGN OUT", destroy_user_session_path, method: :delete %><br>
+        <%= link_to "CHECKOUT", cart_path(current_cart) %>
+        <br><br>
+      <% else %>
+        <%= link_to "SIGN IN", new_user_session_path %>
+      <% end %>
+    </span>
   </div>
   <div class="span1 pull-right" id="new-item-btn">
     <%= link_to new_item_path do %>

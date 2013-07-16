@@ -13,7 +13,7 @@ class @ItemGrid
                 bigZ = if thisZ > bigZ then thisZ else bigZ
             bigZ
 
-        coords = shuffle( [ [80,20], [470,350], [425,45], [130,340] ] )
+        coords = shuffle( [ [80,110], [470,440], [425,135], [130,430] ] )
 
         cards = $(".item-card")
         parent = $("#arranged-list")

@@ -25,11 +25,27 @@
   font-style: normal;
 }
 
+body {
+  background-image: url("fabric_texture_03.jpg");
+}
+.container {
+  max-width: 900px;
+}
+.row {
+  background-color: white;
+  box-shadow: 0 0 25px black;
+  margin-bottom: 30px;
+}
+
 h1 {
+  line-height: 8px;
   font-family: 'quarkbold';
-  font-size: 144px;
+  font-size: 4px;
   font-weight: 200;
   text-align: center;
+  img {
+    width: 300px;
+  }
 }
 
 .footer {

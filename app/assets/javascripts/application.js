@@ -18,6 +18,6 @@
 //= require jquery.ui.draggable
 //= require jquery.webcam.js
 
-$(document).ready(function() {
-  $(".title").fitText(0.6, { maxFontSize: '144px'});
-});
+// $(document).ready(function() {
+//   $(".title").fitText(0.6, { maxFontSize: '144px'});
+// });
