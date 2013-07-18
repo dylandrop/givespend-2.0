@@ -2,7 +2,7 @@
     float: none; 
     margin: 0 auto; 
     width: 80%;
-    height: 700px;
+    height: 830px;
     text-align: center;
     margin-top: 35px;
 }
@@ -13,8 +13,8 @@ ul {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     background-color: white;
-    width: 220px;
-    height: 260px;
+    width: 180px;
+    height: 230px;
     border: 1px solid #39f;
     position: absolute;
     box-shadow: 2px 2px 5px grey;
@@ -24,7 +24,7 @@ ul {
     .img-container {
         overflow: hidden;
         img {
-            height: 185px;
+            height: 155px;
             display: inline-block;
         }
     }
@@ -47,6 +47,22 @@ ul {
             margin-top: 10px;
             color: white;
             text-transform: uppercase;
+        }
+    }
+}
+.red-card {
+    border-color: #E43D3D;
+    .supports {
+        div {
+            background-color: #E43D3D;
+        }
+    }
+}
+.teal-card {
+    border-color: #06C5C5;
+    .supports {
+        div {
+            background-color: #06C5C5;
         }
     }
 }

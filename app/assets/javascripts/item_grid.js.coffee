@@ -19,8 +19,7 @@ class @ItemGrid
         parent = $("#arranged-list")
         initialY = parent.position().top
         initialX = parent.position().left
-        doubles = cards[0..3]
-        singles = cards[4..]
+        doubles = cards
 
         counter = 0
         for e, i in doubles by 2
@@ -30,9 +29,6 @@ class @ItemGrid
             $(second).css('left', coords[counter][0] + 40.0 + initialX)
             $(second).css('top', coords[counter][1] + 20.0 + initialY)
             counter++
-        for e, i in singles
-            $(e).css('left', coords[i + counter][0] + initialX)
-            $(e).css('top', coords[i + counter][1] + initialY)
 
         $(".item-card").each ->
             $(this).draggable

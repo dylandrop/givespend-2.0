@@ -30,13 +30,18 @@ body {
 }
 .container {
   max-width: 900px;
+  padding: 30px;
+  background: #eee;
 }
 .row {
-  background-color: white;
-  box-shadow: 0 0 25px black;
-  margin-bottom: 30px;
+  background-color: #eee;
 }
-
+hr {
+  margin: 10px auto;
+  border-top: 1px solid #AAA;
+  width: 200px;
+  border-bottom: none;
+}
 h1 {
   line-height: 8px;
   font-family: 'quarkbold';
@@ -46,6 +51,10 @@ h1 {
   img {
     width: 300px;
   }
+}
+
+h1,h2,h3,h4,p {
+  font-family: 'Source Sans Pro';
 }
 
 .footer {
