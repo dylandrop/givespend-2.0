@@ -164,6 +164,7 @@ GEM
     multi_json (1.7.6)
     multi_xml (0.5.1)
     multipart-post (1.2.0)
+    newrelic_rpm (3.6.5.130)
     nokogiri (1.5.5)
     oauth (0.4.5)
     oauth2 (0.8.1)
@@ -324,6 +325,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   kaminari
+  newrelic_rpm
   omniauth
   omniauth-facebook
   omniauth-stripe-connect
