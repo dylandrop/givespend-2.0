@@ -217,8 +217,6 @@ GEM
     pry-stack_explorer (0.4.9)
       binding_of_caller (>= 0.7)
       pry (~> 0.9.11)
-    queue_classic (2.1.0)
-      pg (~> 0.14.0)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -337,7 +335,6 @@ DEPENDENCIES
   pry-rails
   pry-remote
   pry-stack_explorer
-  queue_classic
   rails (= 3.2.11)
   rspec-rails
   sass-rails (~> 3.2.3)
