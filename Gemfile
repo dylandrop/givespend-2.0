@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.0.0'
 gem 'rails', '3.2.11'
 
 # Bundle edge Rails instead:
@@ -23,6 +23,7 @@ gem 'aws-sdk'
 gem 'aws-s3'
 gem 'thin'
 gem 'kaminari'
+gem 'figaro'
 
 # Gems used only for assets and not required
 # in production environments by default.

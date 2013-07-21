@@ -7,3 +7,6 @@ config/stripe.yml
 config/s3.yml
 config/social-networks.yml
 config/database.yml
+
+# Ignore application configuration
+/config/application.yml
