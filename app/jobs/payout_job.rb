@@ -1,4 +1,4 @@
-class PayoutJob < QC::Worker
+class PayoutJob
   def self.distribute_payments txn_id
     transaction = Transaction.find txn_id
     items = transaction.cart.items
