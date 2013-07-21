@@ -22,6 +22,7 @@ gem 'paperclip'
 gem 'aws-sdk'
 gem 'aws-s3'
 gem 'thin'
+gem 'kaminari'
 
 # Gems used only for assets and not required
 # in production environments by default.

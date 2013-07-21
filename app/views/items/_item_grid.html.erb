@@ -6,79 +6,19 @@
     <span id="right">MORE <i class="icon-angle-right"></i></span>
     
   </div>
+  <% @items.each do |item| %>
+    <div class="item-card <%= color_class %>">
+      <div class="img-container">
+        <img src="<%= item.image.content.url %>" />
+      </div>
+      <div class="item-title"><%= item.name.upcase %> | $<%= cents_to_dollars(item.price) %></div>
+      <% link_to "Add to cart", add_carts_path(item_id: item.id), method: :post, remote: true %>
+      <div class="supports">
+        <div>SUPPORTS <%= item.nonprofit.name.upcase %></div>
+      </div>
+    </div>
+  <% end %>
 
-  <div class="item-card red-card">
-      <div class="img-container">
-          <img src="http://thumbs1.ebaystatic.com/d/1400/m/mQJKbwt90v5u8frkWrOKbZQ.jpg" />
-      </div>
-      <div class="item-title">ITEM TITLE | $5.99</div>
-      <div class="supports">
-          <div>SUPPORTS WWF</div>
-      </div>
-  </div>
-  <div class="item-card">
-      <div class="img-container">
-          <img src="http://i.ebayimg.com/t/2011-APPLE-MACBOOK-AIR-13-3-MC965LL-A-CORE-I5-4GB-128GB-SSD-/00/s/MTIwMFgxNjAw/z/Q1IAAOxyuuJR0HCg/$(KGrHqMOKooFG+FsQhOOBR0HCf4WJw~~60_35.JPG" />
-      </div>
-      <div class="item-title">ITEM TITLE | $5.99</div>
-      <div class="supports">
-          <div>SUPPORTS WWF</div>
-      </div>
-  </div>
-  <div class="item-card teal-card">
-      <div class="img-container">
-          <img src="http://digital-photography-school.com/wp-content/uploads/2008/01/wide-angle-lens-3-1.jpg" />
-      </div>
-      <div class="item-title">ITEM TITLE | $5.99</div>
-      <div class="supports">
-          <div>SUPPORTS WWF</div>
-      </div>
-  </div>
-  <div class="item-card red-card">
-      <div class="img-container">
-          <img src="http://cdn.morguefile.com/imageData/public/files/t/taliesin/preview/fldr_2008_11_02/file0001148674922.jpg" />
-      </div>
-      <div class="item-title">ITEM TITLE | $5.99</div>
-      <div class="supports">
-          <div>SUPPORTS WWF</div>
-      </div>
-  </div>
-  <div class="item-card">
-      <div class="img-container">
-          <img src="http://img0.etsystatic.com/005/0/6032137/il_570xN.373593976_r3vs.jpg" />
-      </div>
-      <div class="item-title">ITEM TITLE | $5.99</div>
-      <div class="supports">
-          <div>SUPPORTS WWF</div>
-      </div>
-  </div>
-  <div class="item-card">
-      <div class="img-container">
-          <img src="http://img2.etsystatic.com/007/0/6078911/il_570xN.407623666_t1tx.jpg" />
-      </div>
-      <div class="item-title">ITEM TITLE | $5.99</div>
-      <div class="supports">
-          <div>SUPPORTS WWF</div>
-      </div>
-  </div>
-  <div class="item-card red-card">
-      <div class="img-container">
-          <img src="http://img2.etsystatic.com/007/0/6078911/il_570xN.407623666_t1tx.jpg" />
-      </div>
-      <div class="item-title">ITEM TITLE | $5.99</div>
-      <div class="supports">
-          <div>SUPPORTS WWF</div>
-      </div>
-  </div>
-  <div class="item-card teal-card">
-      <div class="img-container">
-          <img src="http://img2.etsystatic.com/007/0/6078911/il_570xN.407623666_t1tx.jpg" />
-      </div>
-      <div class="item-title">ITEM TITLE | $5.99</div>
-      <div class="supports">
-          <div>SUPPORTS WWF</div>
-      </div>
-  </div>
   <ul id="arranged-list"></ul>
 </div>
 <script type="text/javascript">

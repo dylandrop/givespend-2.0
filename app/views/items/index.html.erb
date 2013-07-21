@@ -2,13 +2,3 @@
   <%= render "item_grid" %>
 </div>
 <br>
-<div class="row">
-  <% @items.each do |item| %>
-    <%= link_to item do %>
-      <%= item.name %><br>
-      <%= cents_to_dollars item.price %> <br>
-      <%= item.description %><br>
-      <%= link_to "Add to cart", add_carts_path(item_id: item.id), method: :post, remote: true %><br><br>
-    <% end %>
-  <% end %>
-</div>
