@@ -3,7 +3,11 @@ class Image < ActiveRecord::Base
   attr_accessor :canvas_content
   has_attached_file :content,
                     :storage => :s3,
-                    :s3_credentials => { access_key_id: ENV['s3_access_key_id'], secret_access_key: ENV['s3_secret_access_key']},
+                    :s3_credentials => { 
+                      bucket: ENV['s3_bucket'],
+                      access_key_id: ENV['s3_access_key_id'], 
+                      secret_access_key: ENV['s3_secret_access_key']
+                    },
                     :path => "/:style/:id/:filename"
   belongs_to :imageable, polymorphic: true
 

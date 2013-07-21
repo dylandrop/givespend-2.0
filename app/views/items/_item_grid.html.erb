@@ -7,20 +7,23 @@
     
   </div>
   <% @items.each do |item| %>
-    <div class="item-card <%= color_class %>">
-      <div class="img-container">
-        <img src="<%= item.image.content.url %>" />
+    <a class="fancybox" id="<%= item.id %>">
+      <div class="item-card <%= color_class %>">
+        <div class="img-container">
+          <img src="<%= item.image.content.url %>" />
+        </div>
+        <div class="item-title fancybox"><%= item.name.upcase %> | $<%= cents_to_dollars(item.price) %></div>
+        <% link_to "Add to cart", add_carts_path(item_id: item.id), method: :post, remote: true %>
+        <div class="supports">
+          <div>SUPPORTS <%= item.nonprofit.name.upcase %></div>
+        </div>
       </div>
-      <div class="item-title"><%= item.name.upcase %> | $<%= cents_to_dollars(item.price) %></div>
-      <% link_to "Add to cart", add_carts_path(item_id: item.id), method: :post, remote: true %>
-      <div class="supports">
-        <div>SUPPORTS <%= item.nonprofit.name.upcase %></div>
-      </div>
-    </div>
+    </a>
   <% end %>
 
   <ul id="arranged-list"></ul>
 </div>
 <script type="text/javascript">
   new ItemGrid
+  new ItemPopup
 </script>

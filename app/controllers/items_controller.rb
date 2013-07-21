@@ -20,6 +20,9 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
+    respond_to do |format|
+      format.html { render :layout => !request.xhr? }
+    end
   end
 
   def index
