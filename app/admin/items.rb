@@ -1,5 +1,6 @@
 ActiveAdmin.register Item do
   form do |f|
+
     f.inputs "Item fields" do
       f.input :name
       f.input :description
@@ -11,6 +12,12 @@ ActiveAdmin.register Item do
     end
     f.inputs "Image", for: [:image, f.object.image || Image.new] do |j|
       j.input :content, as: :file
+    end
+    f.inputs "Submits" do
+      
+      f.actions do
+        f.action :submit
+      end
     end
   end
 end

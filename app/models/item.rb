@@ -6,7 +6,10 @@ class Item < ActiveRecord::Base
   has_one :image, as: :imageable
   after_destroy :clean_image
 
-  attr_accessible :description, :expires_from_cart_at, :name, :percentage, :price, :purchased_at, :category_id, :nonprofit_id, :image_attributes
+  attr_accessible :description, :expires_from_cart_at, :name, :percentage, :price, 
+    :purchased_at, :category_id, :nonprofit_id, :image_attributes, as: [:default, :admin]
+  attr_accessible :seller_id, as: :admin
+
   PERCENTAGES = [5,10,15,25,50,75,100]
   accepts_nested_attributes_for :image
 
