@@ -1,5 +1,5 @@
 class Image < ActiveRecord::Base
-  attr_accessible :content, :canvas_content
+  attr_accessible :content, :canvas_content, as: [:default, :admin]
   attr_accessor :canvas_content
   has_attached_file :content,
                     :storage => :s3,
