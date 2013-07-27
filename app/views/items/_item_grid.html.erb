@@ -11,10 +11,10 @@
       <div class="img-container">
         <img src="<%= item.image.content.url %>" />
       </div>
-      <div class="item-title fancybox"><%= item.name.upcase %> | $<%= cents_to_dollars(item.price) %></div>
+      <div class="item-title fancybox"><%= truncate(item.name.upcase, omission: "..", length: 20) %> | $<%= cents_to_dollars(item.price) %></div>
       <% link_to "Add to cart", add_carts_path(item_id: item.id), method: :post, remote: true %>
       <div class="supports">
-        <div>SUPPORTS <%= item.nonprofit.name.upcase %></div>
+        <div>SUPPORTS <%= acronymize item.nonprofit.name.upcase %></div>
       </div>
     </div>
   <% end %>
