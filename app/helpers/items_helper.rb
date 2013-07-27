@@ -4,6 +4,6 @@ module ItemsHelper
 	end
 
   def acronymize some_title
-    /^[A-Z]+$/.match(some_title) ? some_title : some_title.gsub(/(\w)\w+\W*/, '\1').upcase
+    (/^[A-Z]+$/.match(some_title) && some_title.length > 10) ? some_title : some_title.gsub(/(\w)\w+\W*/, '\1').upcase
   end
 end
