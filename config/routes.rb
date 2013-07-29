@@ -21,6 +21,9 @@ Givespend::Application.routes.draw do
       post :checkout
     end
   end
+
+  match 'preview', to: 'pages#preview', via: :get
+
   resources :transactions, only: [:show, :create, :index]
   root :to => "items#index"
 end

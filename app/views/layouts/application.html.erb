@@ -14,7 +14,9 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= render "layouts/controls" %>
-    <%= render "layouts/about_givespend" %>
+    <% if controller.controller_name == 'items' && controller.action_name == 'index' %>
+      <%= render "layouts/about_givespend" %>
+    <% end %>
     <%= yield %>
   </div>
   
