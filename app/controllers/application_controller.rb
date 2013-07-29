@@ -10,7 +10,9 @@ class ApplicationController < ActionController::Base
   end
 
   def preview_state
-    redirect_to preview_path unless on_items_path || params[:controller] == "pages"
+    if Rails.env == "production"
+      redirect_to preview_path unless (on_items_path || params[:controller] == "pages")
+    end
   end
 
   def current_cart
