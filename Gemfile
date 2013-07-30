@@ -54,6 +54,7 @@ group :test do
   gem 'cucumber-rails', require: false
   gem 'pickle'
   gem 'capybara'
+  gem 'webmock'
   gem "shoulda-matchers"
   gem "capybara-webkit", '~> 0.13', require: false
 end
