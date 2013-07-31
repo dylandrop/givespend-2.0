@@ -21,6 +21,11 @@ module IntegrationSpecHelper
       }
     }
   end
+
+  def double_click selector
+    page.should have_css selector
+    page.execute_script(%Q{ $('#{selector}').dblclick(); })
+  end
 end
 
 RSpec.configure do |c|

@@ -9,6 +9,7 @@ describe 'creating a new item' do
   before do
     create(:nonprofit, name: 'WWF')
     create(:category, name: 'Books')
+    Image.any_instance.stub(:save_attached_files).and_return(true)
   end
 
   context 'i am not authorized' do

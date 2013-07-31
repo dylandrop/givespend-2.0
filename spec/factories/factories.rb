@@ -1,3 +1,9 @@
+def paperclip_fixture(model, attachment, extension)
+  Image.any_instance.stub(:save_attached_files).and_return(true)
+  base_path = File.join(File.dirname(__FILE__), "..", "assets", "images")
+  File.new(File.join(base_path, "#{attachment}.#{extension}"))
+end
+
 FactoryGirl.define do
   sequence :email do |n| 
     "email#{n}@factory.com"
@@ -11,6 +17,7 @@ FactoryGirl.define do
     nonprofit
     seller { create :user }
     category
+    image
   end
 
   factory :nonprofit do
@@ -32,6 +39,10 @@ FactoryGirl.define do
     uid '1234'
     token 'something'
     secret 'somethingelse'
+  end
+
+  factory :image do
+    content { paperclip_fixture('image', 'rails', 'png') }
   end
 
   factory :category do
