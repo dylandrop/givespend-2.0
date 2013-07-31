@@ -8,6 +8,7 @@ require 'pry'
 # Add this to load Capybara integration:
 require 'capybara/rspec'
 require 'capybara/rails'
+require 'support/integration_spec_helper'
 
 require 'shoulda/matchers'
 
@@ -44,6 +45,13 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
+  config.before(:each, :selenium=>true) do
+    @old_capybara_driver = Capybara.current_driver
+    Capybara.current_driver = :selenium
+  end
+
+  config.include Capybara::DSL, :type => :request
+
   # Run specs in random order to surface order dependencies. If you find an
   # order dependency and want to debug it, you can fix the order by providing
   # the seed, which is printed after each run.
@@ -51,6 +59,10 @@ RSpec.configure do |config|
   config.order = "random"
   config.include FactoryGirl::Syntax::Methods
   config.include Devise::TestHelpers, :type => :controller
+end
+
+Capybara.register_driver :selenium do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :firefox)
 end
 
 OmniAuth.config.test_mode = true

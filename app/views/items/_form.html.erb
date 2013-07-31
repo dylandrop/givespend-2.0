@@ -15,7 +15,7 @@
   </div>
   <div id = "item_col">
     <div class="field">
-      <%= f.label :category %><br />
+      <%= f.label :category_id, "Category" %><br />
       <%= f.collection_select( :category_id, Category.find(:all), :id, :name, {:include_blank => true} ) %>
       <span class="user-error-message"><%= full_error_message(@item, :category_id) %></span>
     </div>
@@ -30,12 +30,12 @@
   <br />
   <div id= "big_item_col" style="margin: 0 auto;margin-bottom:25px"><br/>
     <div align="center" class="item-field">
-      <%= f.label :choose_your_nonprofit %><br /><br />
+      <%= f.label :nonprofit_id, "Choose your nonprofit" %><br /><br />
       <%= f.collection_select( :nonprofit_id, Nonprofit.all, :id, :name, {:include_blank => true} ) %>
-      <span class="user-error-message"><%= full_error_message(@item, :charity_id) %></span>
+      <span class="user-error-message"><%= full_error_message(@item, :nonprofit_id) %></span>
     </div>
       <div class="item-field" align="center">
-        <%= f.label :percentage_for_nonprofit %><br /><br />
+        <%= f.label :percentage, "Percentage for nonprofit" %><br /><br />
         <%= f.collection_select(:percentage, Item::PERCENTAGES, :to_s, :to_s, {:include_blank => true} ) %>
         <span class="user-error-message"><%= full_error_message(@item, :percentage) %></span>
       </div>

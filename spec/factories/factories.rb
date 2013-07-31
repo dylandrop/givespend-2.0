@@ -28,6 +28,12 @@ FactoryGirl.define do
     password_confirmation { 'password' }
   end
 
+  factory :authentication do
+    uid '1234'
+    token 'something'
+    secret 'somethingelse'
+  end
+
   factory :category do
     name { 'Cat1' }
   end

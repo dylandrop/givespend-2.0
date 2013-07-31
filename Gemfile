@@ -53,10 +53,11 @@ group :test do
   gem 'factory_girl_rails'
   gem 'cucumber-rails', require: false
   gem 'pickle'
-  gem 'capybara'
-  gem 'webmock'
+  gem 'launchy'
+  gem 'capybara', '~> 2.1'
   gem "shoulda-matchers"
-  gem "capybara-webkit", '~> 0.13', require: false
+  gem 'selenium-webdriver'
+  gem "capybara-webkit", '~> 1.0', require: false
 end
 
 # To use ActiveModel has_secure_password

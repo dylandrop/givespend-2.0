@@ -7,15 +7,6 @@ describe 'signing up' do
     click_link "Sign up"
   end
 
-  def set_omniauth_for provider
-    credentials = {:provider => provider,
-                   :uuid   => "1234"}
-   
-    OmniAuth.config.mock_auth[provider] = {
-      'uid' => credentials[:uuid]
-    }
-  end
-
   specify 'via email' do
     visit_sign_up
     fill_in "Email", with: "klaus@octavius.com"

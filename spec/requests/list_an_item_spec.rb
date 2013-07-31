@@ -29,17 +29,17 @@ describe 'creating a new item' do
   end
 
   context 'i am authorized and want to list' do
-    let(:me) { create(:user) }
+    let(:me) { create(:user, authentications: [create(:authentication, provider: 'stripe_connect')]) }
 
     specify 'i fully fill out a valid form' do
       go_to_new_items_for me
       fill_in 'Price', with: '5.00'
-      fill_in 'Item Name', with: 'The Stranger -- Camus'
+      fill_in 'item_name', with: 'The Stranger -- Camus'
       select 'Books', from: 'Category'
       fill_in 'Description', with: 'The best book I\'ve ever read'
-      select '10', from: 'Percentages'
-      select 'WWF', from: 'Nonprofit'
-      page.attach_file('#item_image_content', 'spec/assets/images/rails.png')
+      select '10', from: 'Percentage'
+      select 'WWF', from: 'Choose your nonprofit'
+      page.attach_file('item[image_attributes][content]', 'spec/assets/images/rails.png')
       click_button 'List'
       page.find(".notice").text.should == "Item listed."
     end
