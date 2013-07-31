@@ -20,10 +20,11 @@ describe 'creating a new item' do
     end
 
     specify 'i should be redirected and i should authorize' do
+      set_omniauth_for :stripe_connect
       go_to_new_items_for me
       current_path.should == verify_seller_user_path(me.id)
       click_link 'Sign in with Stripe'
-      me.authorizations.last.provider.should == 'stripe_connect'
+      me.authentications.last.provider.should == 'stripe_connect'
       current_path.should == new_item_path
     end
   end
