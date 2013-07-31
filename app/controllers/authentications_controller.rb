@@ -14,7 +14,7 @@ class AuthenticationsController < ApplicationController
       user = User.new
       user.apply_omniauth(omniauth)
       if user.save
-        flash[:notice] = "Signed in successfully."
+        flash[:notice] = "Welcome! You have signed up successfully."
         sign_in_and_redirect(:user, user)
       else
         session[:omniauth] = omniauth.except('extra')

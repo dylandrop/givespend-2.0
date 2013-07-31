@@ -1,6 +1,6 @@
 <h2>Sign up</h2>
-<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %><br>
-<%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %><br><br>
+<% link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %><br>
+<% link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %><br><br>
 <% if @user %>
   <%= form_for(@user, :as => resource_name, :url => registration_path(@user)) do |f| %>
     <%= devise_error_messages! %>

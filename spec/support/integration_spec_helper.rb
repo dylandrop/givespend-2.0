@@ -13,6 +13,11 @@ module IntegrationSpecHelper
       'credentials' => {
         'token' => 'my_token',
         'secret' => 'my_secret'
+      },
+      'extra' => {
+        'raw_info' => {
+          'email' => 'somethingsomething@test.com'
+        }
       }
     }
   end
