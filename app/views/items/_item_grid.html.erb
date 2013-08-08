@@ -9,7 +9,7 @@
   <% @items.each do |item| %>
     <div class="item-card <%= color_class %> fancybox" id="<%= item.id %>">
       <div class="img-container">
-        <img src="<%= item.image.content.url %>" />
+        <%= image_tag_with_fallback item.image %>
       </div>
       <div class="item-title fancybox"><%= truncate(item.name.upcase, omission: "..", length: 20) %> | $<%= cents_to_dollars(item.price) %></div>
       <% link_to "Add to cart", add_carts_path(item_id: item.id), method: :post, remote: true %>

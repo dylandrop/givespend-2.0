@@ -1,3 +1,19 @@
+@media (max-width: 770px) {
+  .control-bar {
+    width: 100px;
+    display: inline;
+
+    #new-item-btn, #login-controls, #categories {
+      width: 18%;
+      margin-right: 7%;
+      float: left;
+      font-size: 17px;
+    }
+    #login-controls span a {
+      white-space: pre;
+    }
+  }
+}
 
 #categories {
   width: 110px;

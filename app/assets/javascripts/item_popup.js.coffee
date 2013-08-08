@@ -6,3 +6,5 @@ class @ItemPopup
     	  $.fancybox
           href: "items/#{item_id}",
           type: 'ajax'
+      $('.add-to-cart a').click ->
+        $.fancybox.close()
