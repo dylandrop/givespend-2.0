@@ -18,6 +18,7 @@
 //= require jquery.ui.draggable
 //= require jquery.webcam.js
 //= require jquery.fancybox.js
+//= require select2.js
 
 // $(document).ready(function() {
 //   $(".title").fitText(0.6, { maxFontSize: '144px'});
