@@ -1,0 +1,9 @@
+<h4><%= @user.first_name %> <%= @user.last_name %></h4>
+<br>
+<%= @user.state %>
+<br> <br>
+<% @user.reviews_received.each do |review| %>
+  Rating: <%= review.rating %><br>
+  <i><%= review.user_who_gave_review.try(:first_name) %> said:</i> <br>
+  <%= review.description %>
+<% end %>

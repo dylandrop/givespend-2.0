@@ -355,7 +355,9 @@ CREATE TABLE reviews (
     description text,
     item_id integer,
     created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL
+    updated_at timestamp without time zone NOT NULL,
+    user_received_id integer,
+    user_given_id integer
 );
 
 
@@ -740,6 +742,20 @@ CREATE INDEX index_reviews_on_item_id ON reviews USING btree (item_id);
 
 
 --
+-- Name: index_reviews_on_user_given_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_reviews_on_user_given_id ON reviews USING btree (user_given_id);
+
+
+--
+-- Name: index_reviews_on_user_received_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_reviews_on_user_received_id ON reviews USING btree (user_received_id);
+
+
+--
 -- Name: index_transactions_on_cart_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -804,3 +820,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130622002838');
 INSERT INTO schema_migrations (version) VALUES ('20130703002326');
 
 INSERT INTO schema_migrations (version) VALUES ('20130721113158');
+
+INSERT INTO schema_migrations (version) VALUES ('20130819150441');

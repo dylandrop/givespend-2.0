@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
   has_many :authentications, as: :authenticatable
   has_many :carts
   has_many :items
+  has_many :reviews_received, class_name: Review, foreign_key: :user_received_id
+  has_many :reviews_given, class_name: Review, foreign_key: :user_given_id
 
   def apply_omniauth(omniauth)
     self.email = omniauth['extra']['raw_info']['email'] if omniauth['provider'] == 'facebook'
