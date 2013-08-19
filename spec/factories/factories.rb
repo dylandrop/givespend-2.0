@@ -48,4 +48,10 @@ FactoryGirl.define do
   factory :category do
     name { 'Cat1' }
   end
+
+  factory :review do
+    rating 5
+    description "Wallawalla"
+    item { create :item }
+  end
 end
