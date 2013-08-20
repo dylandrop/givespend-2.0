@@ -11,10 +11,14 @@
 </head>
 <body>
   <div class="container">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <p class="error"><%= flash[:error] %></p>
     <%= render "layouts/controls" %>
+    <div class="messages-container">
+      <% [:notice, :alert, :error].each do |flash_type| %>
+        <% if flash[flash_type].present? %>
+          <div class="<%= flash_type %>"><%= flash[flash_type] %></div>
+        <% end %>
+      <% end %>
+    </div>
     <% if controller.controller_name == 'items' && controller.action_name == 'index' %>
       <%= render "layouts/about_givespend" %>
     <% end %>

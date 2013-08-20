@@ -27,6 +27,10 @@
   font-style: normal;
 }
 
+* {
+  font-family: 'Source Sans Pro'
+}
+
 body {
   background-image: url("wood_texture.jpg");
 }
@@ -56,7 +60,7 @@ h1 {
 }
 
 h1,h2,h3,h4,p {
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', 'Arial';
 }
 
 .footer {
