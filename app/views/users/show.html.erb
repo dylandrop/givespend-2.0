@@ -1,10 +1,8 @@
 <h4><%= @user.first_name %> <%= @user.last_name %></h4>
-<br>
-<%= @user.state %>
 <br> <br>
 <div class="reviews">
   <% @user.reviews_received.each do |review| %>
-    <%= review.item.try(:name) %>
+    <%= review.item.try(:name) %><br>
     Rating: <%= review.rating %><br>
     <i><%= review.user_who_gave_review.try(:first_name) %> said:</i> <br>
     <%= review.description %>

@@ -1,0 +1,26 @@
+<%= current_user.first_name %> <%= current_user.last_name %>
+<i>The following information is not accessible to the public, and is for your eyes only.</i><Br>
+<br>
+<div class="mailing-info">
+  <%= current_user.street_address %><br>
+  <%= current_user.city %>, <%= current_user.state %> <%= current_user.zipcode %>
+</div>
+<br>
+<% current_user.items_bought.each do |item| %>
+  <%= item.name %><br>
+  <%= cents_to_dollars(item.price) %><br>
+  <% unless item.reviewed? %>
+    <% item.build_review %>
+    <%= form_for(item.review) do |f| %>
+      <%= f.hidden_field :item_id, value: item.id %>
+      <% Review::RATINGS.each do |rating| %>
+        <%= f.radio_button :rating, rating %>
+      <% end %><br>
+      <%= f.text_area :description %><br>
+      <%= f.submit %>
+    <% end %>
+  <% else %>
+    <%= item.review.rating %><br>
+    <%= item.review.description %><br>
+  <% end %><br>
+<% end %>

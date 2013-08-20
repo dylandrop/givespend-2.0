@@ -9,6 +9,7 @@ Givespend::Application.routes.draw do
       get :verify_seller
     end
   end
+  match 'my_profile', to: 'users#my_profile', via: :get
   resources :authentications, only: [:index]
   resources :nonprofits, only: [:index, :show]
   resources :items, only: [:index,:new,:create,:show]
@@ -21,7 +22,7 @@ Givespend::Application.routes.draw do
       post :checkout
     end
   end
-
+  resources :reviews, only: [:create, :update]
   match 'preview', to: 'pages#preview', via: :get
 
   resources :transactions, only: [:show, :create, :index]

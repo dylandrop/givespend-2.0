@@ -288,7 +288,8 @@ CREATE TABLE items (
     purchased_at date,
     expires_from_cart_at date,
     created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL
+    updated_at timestamp without time zone NOT NULL,
+    bought_by_id integer
 );
 
 
@@ -714,6 +715,13 @@ CREATE INDEX index_carts_on_user_id ON carts USING btree (user_id);
 
 
 --
+-- Name: index_items_on_bought_by_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_items_on_bought_by_id ON items USING btree (bought_by_id);
+
+
+--
 -- Name: index_items_on_category_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -822,3 +830,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130703002326');
 INSERT INTO schema_migrations (version) VALUES ('20130721113158');
 
 INSERT INTO schema_migrations (version) VALUES ('20130819150441');
+
+INSERT INTO schema_migrations (version) VALUES ('20130819160039');

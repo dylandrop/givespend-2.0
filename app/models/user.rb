@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   has_many :authentications, as: :authenticatable
   has_many :carts
   has_many :items
+  has_many :items_bought, class_name: Item, foreign_key: :bought_by_id
   has_many :reviews_received, class_name: Review, foreign_key: :user_received_id
   has_many :reviews_given, class_name: Review, foreign_key: :user_given_id
 

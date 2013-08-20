@@ -2,7 +2,9 @@ class Item < ActiveRecord::Base
   belongs_to :nonprofit
   belongs_to :cart
   belongs_to :category
-  belongs_to :seller, class_name: "User"
+  has_one :review
+  belongs_to :seller, class_name: User
+  belongs_to :buyer, class_name: User, foreign_key: :bought_by_id
   has_one :image, as: :imageable
   after_destroy :clean_image
 
@@ -20,6 +22,10 @@ class Item < ActiveRecord::Base
 
   def clean_image
     self.image.destroy if self.image
+  end
+
+  def reviewed?
+    review.present?
   end
 
   private

@@ -13,6 +13,7 @@
   <div class="container">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <p class="error"><%= flash[:error] %></p>
     <%= render "layouts/controls" %>
     <% if controller.controller_name == 'items' && controller.action_name == 'index' %>
       <%= render "layouts/about_givespend" %>
