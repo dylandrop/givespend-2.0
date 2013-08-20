@@ -1,23 +1,35 @@
-<%= form_tag({controller: 'transactions', action: 'create'}, method: :post, id: "checkout_card_form") %>
+<%= form_tag({controller: 'transactions', action: 'create'}, method: :post, id: "checkout_card_form", class: 'form-horizontal') %>
   <%= hidden_field_tag :stripe_card_token %>
-  <div class="field">
-    <%= label_tag :email %>
-    <%= text_field_tag :email %>
+  <div class="control-group">
+    <%= label_tag :email, "Email", class: 'control-label', for: 'email' %>
+    <div class="controls">
+      <%= text_field_tag :email %>
+    </div>
   </div>
-  <div class="field">
-    <%= label_tag :card_number, "Credit Card Number" %>
-    <%= text_field_tag :card_number, nil, name: nil %>
+  <div class="control-group">
+    <%= label_tag :card_number, "Credit Card Number", class: 'control-label', for: 'card_number' %>
+    <div class="controls">
+      <%= text_field_tag :card_number, nil, name: nil %>
+    </div>
   </div>
-  <div class="field">
-    <%= label_tag :card_code, "Security Code on Card (CVV)" %>
-    <%= text_field_tag :card_code, nil, name: nil %>
+  <div class="control-group">
+    <%= label_tag :card_code, "Security Code on Card (CVV)", class: 'control-label', for: 'card_code' %>
+    <div class="controls">
+      <%= text_field_tag :card_code, nil, name: nil %>
+    </div>
   </div>
-  <div class="field">
-    <%= label_tag :card_month, "Card Expiration" %>
-    <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
-    <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
+  <div class="control-group">
+    <%= label_tag :card_month, "Card Expiration", class: 'control-label', for: 'card_month' %>
+    <div class="controls">
+      <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
+      <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
+    </div>
   </div>
-  <%= submit_tag "Submit" %>
+  <div class="control-group">
+    <div class="controls">
+      <%= submit_tag "Submit" %>
+    </div>
+  </div>
 </form>
 <div id="stripe_error">
   <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>

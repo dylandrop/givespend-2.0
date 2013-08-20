@@ -1,63 +1,70 @@
-<br/>
-<div id = "new_item_container">
-<%= form_for @item do |f| %>
-  <div id = "item_col">
-    <div class="field item-field">
-      <%= f.label :price %><br />
+<%= form_for(@item, html: { class: 'form-horizontal'}) do |f| %>
+  <div class="control-group">
+    <div class="controls">
+      <h2>List an item</h2>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :price, class: 'control-label', for: 'item_price' %>
+    <div class="controls">
       <%= f.text_field :price %>
-      <span class="user-error-message"><%= full_error_message(@item, :price) %></span>
     </div>
-    <div class="field item-field">
-      <%= f.label :item_name %><br />
+  </div>
+
+  <div class="control-group">
+    <%= f.label :item_name, class: 'control-label', for: 'item_name' %>
+    <div class="controls">
       <%= f.text_field :name %>
-      <span class="user-error-message"><%= full_error_message(@item, :name) %></span>
     </div>
   </div>
-  <div id = "item_col">
-    <div class="field">
-      <%= f.label :category_id, "Category" %><br />
+
+  <div class="control-group">
+    <%= f.label :category_id, "Category", class: 'control-label', for: 'item_category' %>
+    <div class="controls">
       <%= f.collection_select( :category_id, Category.find(:all), :id, :name, {:include_blank => true} ) %>
-      <span class="user-error-message"><%= full_error_message(@item, :category_id) %></span>
     </div>
-    <br / >
-    <div class="area">
-      <%= f.label :description %><br />
+  </div>
+
+  <div class="control-group">
+    <%= f.label :description, class: 'control-label', for: 'item_description' %>
+    <div class="controls">
       <%= f.text_area :description %>
-      <span class="user-error-message"><%= full_error_message(@item, :description) %></span>
     </div>
-    <br />
   </div>
-  <br />
-  <div id= "big_item_col" style="margin: 0 auto;margin-bottom:25px"><br/>
-    <div align="center" class="item-field">
-      <%= f.label :nonprofit_id, "Choose your nonprofit" %><br /><br />
+
+  <div class="control-group">
+    <%= f.label :nonprofit_id, "Choose your nonprofit", class: 'control-label', for: 'item_nonprofit_id' %>
+    <div class="controls">
       <%= f.collection_select( :nonprofit_id, Nonprofit.all, :id, :name, {:include_blank => true} ) %>
-      <span class="user-error-message"><%= full_error_message(@item, :nonprofit_id) %></span>
     </div>
-      <div class="item-field" align="center">
-        <%= f.label :percentage, "Percentage for nonprofit" %><br /><br />
-        <%= f.collection_select(:percentage, Item::PERCENTAGES, :to_s, :to_s, {:include_blank => true} ) %>
-        <span class="user-error-message"><%= full_error_message(@item, :percentage) %></span>
-      </div>
   </div>
-  <br />
-  <br />
-  <%= f.fields_for :image, :html => { :multipart => true } do |image_fields| %>
-    <%= image_fields.file_field :content %>
-    <div id="webcam">
-    </div>
-    <div id="capture_images">
-      <%= image_fields.hidden_field :canvas_content %>
-    </div>
-    <div id="capture">Take a picture!</div>
-    <canvas id="canvas" width="320" height="240" style="border:1px solid black"></canvas>
-  <% end %>
 
+  <div class="control-group">
+    <%= f.label :percentage, "Percentage for nonprofit", class: 'control-label', for: 'item_percentage' %>
+    <div class="controls">
+      <%= f.collection_select(:percentage, Item::PERCENTAGES, :to_s, :to_s, {:include_blank => true} ) %>
+    </div>
+  </div>
 
-  <div class="actions">
-    <br />
-    <%= button_tag "List", :class => "cupid-green", :disable_with => "Saving..." %>
+  <div class="control-group">
+    <div class="controls">
+      <%= f.fields_for :image, :html => { :multipart => true } do |image_fields| %>
+        <%= image_fields.file_field :content %>
+        <div id="webcam">
+        </div>
+        <div id="capture_images">
+          <%= image_fields.hidden_field :canvas_content %>
+        </div>
+        <div id="capture">Take a picture!</div>
+        <canvas id="canvas" width="320" height="240" style="border:1px solid black"></canvas>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <div class="controls">
+      <%= button_tag "List", :class => "cupid-green", :disable_with => "Saving..." %>
+    </div>
   </div>
 <% end %>
-</div>
 <%= render "webcam" %>
