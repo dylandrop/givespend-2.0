@@ -20,7 +20,9 @@
       <%= f.submit %>
     <% end %>
   <% else %>
-    <%= item.review.rating %><br>
-    <%= item.review.description %><br>
+    <div class="item-review">
+      <%= item.review.rating %><br>
+      <%= item.review.description %><br>
+    </div>
   <% end %><br>
 <% end %>
