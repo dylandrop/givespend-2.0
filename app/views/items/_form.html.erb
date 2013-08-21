@@ -4,10 +4,11 @@
       <h2>List an item</h2>
     </div>
   </div>
+
   <div class="control-group">
-    <%= f.label :price, class: 'control-label', for: 'item_price' %>
+    <%= f.label :price, "Price (in $)", class: 'control-label', for: 'item_price' %>
     <div class="controls">
-      <%= f.text_field :price %>
+      <%= f.text_field :price, placeholder: "X.XX" %>
     </div>
   </div>
 
@@ -28,7 +29,7 @@
   <div class="control-group">
     <%= f.label :description, class: 'control-label', for: 'item_description' %>
     <div class="controls">
-      <%= f.text_area :description %>
+      <%= f.text_area :description, placeholder: "Describe what your item is, and its condition..." %>
     </div>
   </div>
 
