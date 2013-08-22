@@ -31,58 +31,58 @@
 
 #nav{
   display: inline-block;
-  list-style:none;
-  margin-bottom:10px;
+  list-style: none;
+  margin-bottom: 10px;
   i.icon-chevron-down {
     font-size: .7em;
   }
   li{
     width: 105px;
-    margin-right:10px;
-    position:relative;
+    margin-right: 10px;
+    position: relative;
   }
   a {
-    display:block;
-    padding:5px;
-    color:#fff;
-    background:#333;
-    text-decoration:none;
+    display: block;
+    padding: 5px;
+    color: #fff;
+    background: #333;
+    text-decoration: none;
   }
-  a:hover{
-    color:#fff;
-    background:#6b0c36;
-    text-decoration:underline;
+  a:hover {
+    color: #fff;
+    background: #6b0c36;
+    text-decoration: underline;
   }
-  ul{
-    background:#fff; 
-    background:rgba(255,255,255,0); 
-    list-style:none;
-    position:absolute;
-    left:-9999px; 
-    li{
+  ul {
+    background: #fff; 
+    background: rgba(255,255,255,0); 
+    list-style: none;
+    position: absolute;
+    left: -9999px; 
+    li {
       text-align: left;
       font-weight: 300;
-      padding-top:1px;
-      float:none;
+      padding-top: 1px;
+      float: none;
       z-index: 99999;
     }
-    a{
-      white-space:nowrap;
+    a {
+      white-space: nowrap;
     }
   }
   li:hover {
-    ul{ 
-      left:0; 
-      a{ 
-        text-decoration:none;
+    ul { 
+      left: 0; 
+      a { 
+        text-decoration: none;
       }
-      li a:hover{ 
-        background:#333;
+      li a:hover { 
+        background: #333;
       }
     }
-    a{ 
-      background:#6b0c36;
-      text-decoration:underline;
+    a { 
+      background: #6b0c36;
+      text-decoration: underline;
     }
   }
 }
