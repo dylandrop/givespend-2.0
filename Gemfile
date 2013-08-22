@@ -19,6 +19,7 @@ gem 'aws-s3'
 gem 'thin'
 gem 'kaminari'
 gem 'figaro'
+gem 'sidekiq'
 
 group :development do
   gem 'pry-rails'
