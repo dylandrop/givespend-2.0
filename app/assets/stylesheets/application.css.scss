@@ -16,20 +16,6 @@
  *= require jquery.fancybox.css
  *= require select2.css
  */
-@font-face {
-  font-family: 'quarkbold';
-  src: url('quark-bold-webfont.eot');
-  src: url('quark-bold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('quark-bold-webfont.woff') format('woff'),
-       url('quark-bold-webfont.ttf') format('truetype'),
-       url('quark-bold-webfont.svg#quarkbold') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-* {
-  font-family: 'Source Sans Pro'
-}
 
 body {
   background-image: url("wood_texture.jpg");
@@ -73,7 +59,6 @@ h1,h2,h3,h4,p {
   width:100%;
   z-index: 99999;
   color: white;
-  font-family: 'Source Sans Pro';
   vertical-align: middle;
   font-size: 19px;
   font-weight: 200;
