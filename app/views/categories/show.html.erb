@@ -1,7 +1,4 @@
-<% @items.each do |item| %>
-  <%= link_to item do %>
-    <%= item.name %><br>
-    <%= cents_to_dollars item.price %> <br>
-    <%= item.description %><br> <Br>
-  <% end %>
-<% end %>
+<div class="row">
+  <%= render "items/item_grid" %>
+</div>
+<br>
