@@ -20,6 +20,7 @@ gem 'thin'
 gem 'kaminari'
 gem 'figaro'
 gem 'sidekiq'
+gem 'mailjet'
 
 group :development do
   gem 'pry-rails'
