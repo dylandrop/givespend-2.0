@@ -156,6 +156,8 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mailjet (0.0.4)
+      activesupport (>= 3.1.0)
     meta_search (1.1.3)
       actionpack (~> 3.1)
       activerecord (~> 3.1)
@@ -341,6 +343,7 @@ DEPENDENCIES
   jquery-ui-rails
   kaminari
   launchy
+  mailjet
   newrelic_rpm
   omniauth
   omniauth-facebook
