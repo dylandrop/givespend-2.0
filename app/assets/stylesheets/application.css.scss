@@ -78,5 +78,12 @@ h1,h2,h3,h4,p {
   font-size: 19px;
   font-weight: 200;
   text-align: center;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  a:visited {
+    color: white;
+  }
 }
 
