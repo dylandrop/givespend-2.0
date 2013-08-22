@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Emanuel', :city => cities.first)
-names = ['books', 'clothing','games','movies','music','textbooks', 'miscellaneous']
+names = ['books', 'clothing','games','movies','music','textbooks', 'other']
 
 names.each do |name|
   Category.create(:name => name)
