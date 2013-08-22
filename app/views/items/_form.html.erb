@@ -9,6 +9,9 @@
     <%= f.label :price, "Price (in $)", class: 'control-label', for: 'item_price' %>
     <div class="controls">
       <%= f.text_field :price, placeholder: "X.XX" %>
+      <div class="error-inline">
+        <%= @item.errors[:price].first %>
+      </div>
     </div>
   </div>
 
@@ -16,6 +19,9 @@
     <%= f.label :item_name, class: 'control-label', for: 'item_name' %>
     <div class="controls">
       <%= f.text_field :name %>
+      <div class="error-inline">
+        <%= @item.errors[:name].first %>
+      </div>
     </div>
   </div>
 
@@ -23,6 +29,9 @@
     <%= f.label :category_id, "Category", class: 'control-label', for: 'item_category' %>
     <div class="controls">
       <%= f.collection_select( :category_id, Category.find(:all), :id, :name, {:include_blank => true} ) %>
+      <div class="error-inline">
+        <%= @item.errors[:category].first %>
+      </div>
     </div>
   </div>
 
@@ -30,6 +39,9 @@
     <%= f.label :description, class: 'control-label', for: 'item_description' %>
     <div class="controls">
       <%= f.text_area :description, placeholder: "Describe what your item is, and its condition..." %>
+      <div class="error-inline">
+        <%= @item.errors[:description].first %>
+      </div>
     </div>
   </div>
 
@@ -37,6 +49,9 @@
     <%= f.label :nonprofit_id, "Choose your nonprofit", class: 'control-label', for: 'item_nonprofit_id' %>
     <div class="controls">
       <%= f.collection_select( :nonprofit_id, Nonprofit.all, :id, :name, {:include_blank => true} ) %>
+      <div class="error-inline">
+        <%= @item.errors[:nonprofit].first %>
+      </div>
     </div>
   </div>
 
@@ -44,6 +59,9 @@
     <%= f.label :percentage, "Percentage for nonprofit", class: 'control-label', for: 'item_percentage' %>
     <div class="controls">
       <%= f.collection_select(:percentage, Item::PERCENTAGES, :to_s, :to_s, {:include_blank => true} ) %>
+      <div class="error-inline">
+        <%= @item.errors[:percentage].first %>
+      </div>
     </div>
   </div>
 
@@ -51,6 +69,9 @@
     <div class="controls">
       <%= f.fields_for :image, :html => { :multipart => true } do |image_fields| %>
         <%= image_fields.file_field :content %>
+        <div class="error-inline">
+          <%= @item.image.errors[:content].first %>
+        </div>
         <div id="webcam">
         </div>
         <div id="capture_images">

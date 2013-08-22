@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    @item.build_image
+    @item.build_image(params[:item])
   end
 
   def create
@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
       redirect_to items_path(@item)
     else
       flash[:error] = "There were issues with your listing."
-      redirect_to new_item_path(@item)
+      render :new, params
     end
   end
 
