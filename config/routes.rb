@@ -24,6 +24,7 @@ Givespend::Application.routes.draw do
   end
   resources :reviews, only: [:create, :update]
   match 'preview', to: 'pages#preview', via: :get
+  match 'about', to: 'pages#about', via: :get
 
   resources :transactions, only: [:show, :create, :index]
   root :to => "items#index"
