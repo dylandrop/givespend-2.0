@@ -23,5 +23,14 @@ describe Item do
       item = create(:item, price: 10)
       item.price.should == 1000
     end
+
+    it 'doesn\'t alter the price if i resave or validate it' do
+      item = create(:item, price: 10)
+      item.price.should == 1000
+      item.valid?
+      item.price.should == 1000
+      item.save!
+      item.price.should == 1000
+    end
   end
 end

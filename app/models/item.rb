@@ -15,10 +15,10 @@ class Item < ActiveRecord::Base
   PERCENTAGES = [5,10,15,25,50,75,100]
   accepts_nested_attributes_for :image
 
-  before_validation :price_to_cents
+  before_save :price_to_cents
   validates :nonprofit, :seller, :name, :percentage, :price, :category, presence: true
   validates :percentage, inclusion: { in: PERCENTAGES }
-  validates :price, numericality: { greater_than_or_equal_to: 100 }
+  validates :price, numericality: { greater_than_or_equal_to: 1 }
 
   def clean_image
     self.image.destroy if self.image
