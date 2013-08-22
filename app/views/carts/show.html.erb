@@ -1,5 +1,10 @@
-<% current_cart.items.each do |item| %>
-  <%= item.name %><br>
-  <%= cents_to_dollars(item.price) %><br><br>
+<% if current_cart.items.empty? %>
+  You don't have anything added to your cart yet.<Br>
+  <%= link_to "Back", :back %>
+<% else %>
+  <% current_cart.items.each do |item| %>
+    <%= item.name %><br>
+    <%= cents_to_dollars(item.price) %><br><br>
+  <% end %>
+  <%= render 'checkout_form' %>
 <% end %>
-<%= render 'checkout_form' %>
