@@ -8,9 +8,11 @@
     <% if current_user %>
       <%= link_to "SIGN OUT", destroy_user_session_path, method: :delete %> &nbsp;
       <%= link_to "CHECKOUT", cart_path(current_cart) %> &nbsp;
+      <%= link_to "MY PROFILE", my_profile_path %> &nbsp;
     <% else %>
       <%= link_to "SIGN IN", new_user_session_path %> &nbsp;
     <% end %>
+
     <%= link_to "LIST", new_item_path %> &nbsp;
     <div id="nav">
       <li>
