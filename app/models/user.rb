@@ -15,6 +15,10 @@ class User < ActiveRecord::Base
   has_many :reviews_received, class_name: Review, foreign_key: :user_received_id
   has_many :reviews_given, class_name: Review, foreign_key: :user_given_id
 
+  def has_shipping_address?
+    [street_address, city, state, zipcode].all?(&:present?)
+  end
+
   def apply_omniauth(omniauth)
     self.email = omniauth['extra']['raw_info']['email'] if omniauth['provider'] == 'facebook'
     secret = omniauth['credentials'].try(:[],'secret')
