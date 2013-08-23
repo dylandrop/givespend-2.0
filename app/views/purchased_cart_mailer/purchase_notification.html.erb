@@ -1,0 +1,9 @@
+Thanks for shopping on Givespend. Just to review, here are the items you've purchased:
+<br><br>
+<%= @cart.items.each do |item| %>
+  <%= item.name %>, <%= cents_to_dollars(item.price) %><br>
+<% end %>
+<br><br>
+For any help/support, please contact us back at this email. Thanks again!
+<br><br>
+--Givespend Team

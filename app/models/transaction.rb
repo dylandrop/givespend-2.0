@@ -7,8 +7,7 @@ class Transaction < ActiveRecord::Base
       customer = Stripe::Customer.create(card: stripe_card_token)
       self.stripe_customer_token = customer.id
       save!
-      cart = Cart.find(self.cart_id)
-      cart.update_attributes!(purchased_at: Time.now)
+      Cart.delay.purchase(self.cart_id)
     end
   rescue Stripe::InvalidRequestError => e
     logger.error "Stripe error while creating customer: #{e.message}"
