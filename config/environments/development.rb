@@ -32,6 +32,13 @@ Givespend::Application.configure do
   # Do not compress assets
   config.assets.compress = false
 
+  config.action_mailer.raise_delivery_errors = true
+  unless ENV['MAILJET'].present?
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
+  else
+    config.action_mailer.delivery_method = :mailjet
+  end
   # Expands the lines which load the assets
   config.assets.debug = true
 end

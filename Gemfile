@@ -23,6 +23,7 @@ gem 'sidekiq'
 gem 'mailjet'
 
 group :development do
+  gem 'mailcatcher'
   gem 'pry-rails'
   gem 'pry-remote'
   gem 'pry-stack_explorer'

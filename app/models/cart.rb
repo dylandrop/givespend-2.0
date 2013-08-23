@@ -13,7 +13,9 @@ class Cart < ActiveRecord::Base
     self.update_attribute(:purchased_at, time_purchased)
     PurchasedCartMailer.delay.purchase_notification cart.id
     items.each do |item|
-      item.update_attribute(:purchased_at, time_purchased)
+      item.purchased_at = time_purchased
+      item.buyer = user
+      item.save!
       SoldAnItemMailer.delay.item_sold item.id, user.id
     end
   end

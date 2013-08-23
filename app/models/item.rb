@@ -1,6 +1,7 @@
 class Item < ActiveRecord::Base
   belongs_to :nonprofit
-  belongs_to :cart
+  has_many :cart_items
+  has_many :carts, through: :cart_items
   belongs_to :category
   has_one :review
   belongs_to :seller, class_name: User
@@ -22,6 +23,10 @@ class Item < ActiveRecord::Base
 
   def clean_image
     self.image.destroy if self.image
+  end
+
+  def price_in_dollars
+    '%.2f' % (price.to_i/100.0)
   end
 
   def reviewed?
