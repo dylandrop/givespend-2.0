@@ -1,5 +1,5 @@
 Mailjet.configure do |config|
-  config.api_key = 'X'
-  config.secret_key = 'X'
-  config.default_from = 'X'
+  config.api_key = ENV['mailjet_api_key']
+  config.secret_key = ENV['mailjet_secret_key']
+  config.default_from = 'admin@givespend.com'
 end
