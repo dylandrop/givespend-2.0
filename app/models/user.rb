@@ -25,6 +25,15 @@ class User < ActiveRecord::Base
     (authentications.empty? || !password.blank?) && super
   end
 
+  def street_address format = :text
+    addr_ary = [
+      "#{first_name.capitalize} #{last_name.capitalize}",
+      "#{street_address}",
+      "#{city_state_address_line} #{zipcode}"
+    ]
+    format == :text ? addr_ary.join('\n') : addr_ary.join('<br>')
+  end
+
   def build_stripe_params(user_url)
     { 'stripe_user[email]' => email, 
     'stripe_user[business_type]' => 'sole_prop', 
@@ -36,5 +45,11 @@ class User < ActiveRecord::Base
     'stripe_user[state]' => state, 
     'stripe_user[city]' => city, 
     'stripe_user[currency]' => 'usd' }.reject {|k,v| v.nil?}
+  end
+
+  private
+
+  def city_state_address_line
+    [city, state].select(&:present?).join(", ")
   end
 end
