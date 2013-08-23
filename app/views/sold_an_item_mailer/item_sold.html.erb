@@ -1,7 +1,7 @@
-Good job! You just sold <%= @item.name %> on Givespend. In doing so, you've provided <%= @item.nonprofit.name %> with a little more funding. Please refer below for the shipping details:
+Good job! You just sold "<%= @item.name %>" on Givespend. In doing so, you've provided <%= @item.nonprofit.name %> with a little more funding. Please refer below for the shipping details:
 <br><br>
-<%= @buyer.shipping_info(:html) %>
+<%= raw @buyer.shipping_info(:html) %>
 <br><br>
 Thanks,
-<br><br>
+<br>
 Givespend Team
