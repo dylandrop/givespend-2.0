@@ -12,6 +12,18 @@
 		width: 400px;
 		display: inline;
 	}
+	.listed-by {
+		a {
+			color: #39f;
+			text-decoration: none;
+		}
+		a:visited {
+			color: #39f;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	}
 	.description {
 		vertical-align: top;
 		width: 380px;

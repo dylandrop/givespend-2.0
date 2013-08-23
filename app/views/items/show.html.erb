@@ -1,8 +1,10 @@
 <div class="item-show">
-	<%= image_tag @item.image.content.url %>
+	<%= image_tag_with_fallback @item.image %>
   <div class="description">
     <h3><%= @item.name %></h3><br>
-    $<%= cents_to_dollars @item.price %> - $<%= cents_to_dollars(@item.price * @item.percentage / 100.0) %> goes to <%= @item.nonprofit.name.upcase %><br><br>
+    <span class="listed-by">Listed by <%= link_to @item.seller.first_name, @item.seller %>
+    </span><br><br>
+    $<%= cents_to_dollars @item.price %> ($<%= cents_to_dollars(@item.price * @item.percentage / 100.0) %> goes to <%= @item.nonprofit.name.upcase %>)<br><br>
     <%= @item.description %><br> <Br>
     <div class='add-to-cart'><%= link_to "ADD TO CART", add_carts_path(item_id: @item.id), method: :post, remote: true %></div>
   </div>
