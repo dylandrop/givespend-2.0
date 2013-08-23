@@ -1,28 +1,35 @@
-<%= current_user.first_name %> <%= current_user.last_name %>
+<br>
+<h3><%= current_user.first_name %> <%= current_user.last_name %></h3>
 <i>The following information is not accessible to the public, and is for your eyes only.</i><Br>
 <br>
+<%= link_to "Edit your account", edit_user_registration_path, class: "edit-my-account-link" %><br>
+<h4>Mailing info</h4>
 <div class="mailing-info">
   <%= current_user.street_address %><br>
   <%= current_user.city %>, <%= current_user.state %> <%= current_user.zipcode %>
 </div>
 <br>
+<h4>Items purchased</h4>
 <% current_user.items_bought.each do |item| %>
-  <%= item.name %><br>
-  <%= cents_to_dollars(item.price) %><br>
+  Name: <i><%= item.name %></i><br>
+  Price paid: <i>$<%= cents_to_dollars(item.price) %></i><br>
   <% unless item.reviewed? %>
     <% item.build_review %>
     <%= form_for(item.review) do |f| %>
       <%= f.hidden_field :item_id, value: item.id %>
+      Rating:&nbsp;&nbsp;<i>1 (worst) &nbsp;</i>
       <% Review::RATINGS.each do |rating| %>
         <%= f.radio_button :rating, rating %>
-      <% end %><br>
-      <%= f.text_area :description %><br>
+      <% end %> <i>&nbsp;5 (best)</i>
+      <br>
+      Review:<br>
+      <%= f.text_area :description, placeholder: "What did you think of this item?" %><br>
       <%= f.submit %>
     <% end %>
   <% else %>
     <div class="item-review">
-      <%= item.review.rating %><br>
-      <%= item.review.description %><br>
+      Rating: <i><%= item.review.rating %></i><br>
+      Review: <i><%= item.review.description %></i><br>
     </div>
   <% end %><br>
 <% end %>

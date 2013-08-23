@@ -1,0 +1,10 @@
+a.edit-my-account-link {
+  text-decoration: none;
+  color: #39f;
+  &:visited {
+    color: #39f;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
