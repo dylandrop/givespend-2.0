@@ -25,13 +25,13 @@ class User < ActiveRecord::Base
     (authentications.empty? || !password.blank?) && super
   end
 
-  def street_address format = :text
+  def shipping_info format = :text
     addr_ary = [
       "#{first_name.capitalize} #{last_name.capitalize}",
       "#{street_address}",
       "#{city_state_address_line} #{zipcode}"
     ]
-    format == :text ? addr_ary.join('\n') : addr_ary.join('<br>')
+    format == :text ? addr_ary.join("\n") : addr_ary.join('<br>')
   end
 
   def build_stripe_params(user_url)
