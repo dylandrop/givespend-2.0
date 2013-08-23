@@ -25,3 +25,44 @@
     <%= f.password_field :password_confirmation %>
   </div>
 </div>
+
+<div class="control-group">
+  <div class="controls">
+    <h3>Mailing Address</h3>
+  </div>
+</div>
+
+<div class="control-group">
+  <div class="controls">
+    <i>This info is necessary to purchase anything on Givespend.</i>
+  </div>
+</div>
+
+<div class='control-group'>
+  <%= f.label :street_address, class: 'control-label', for: 'user_street_address' %>
+  <div class="controls">
+    <%= f.text_field :street_address %>
+  </div>
+</div>
+
+<div class='control-group'>
+  <%= f.label :city, class: 'control-label', for: 'user_city' %>
+  <div class="controls">
+    <%= f.text_field :city %>
+  </div>
+</div>
+
+<div class='control-group'>
+  <%= f.label :state, class: 'control-label', for: 'user_state' %>
+  <div class="controls">
+    <%= f.text_field :state %>
+  </div>
+</div>
+
+<div class='control-group'>
+  <%= f.label :zipcode, class: 'control-label', for: 'user_zipcode' %>
+  <div class="controls">
+    <%= f.text_field :zipcode %>
+  </div>
+</div>
+<br><br>
