@@ -1,5 +1,5 @@
 class SoldAnItemMailer < ActionMailer::Base
-  default from: "admin@givespend.com"
+  default from: "Givespend <admin@givespend.com>"
   def item_sold item_id, buyer_id
     @item = Item.find(item_id)
     @buyer = User.find(buyer_id)
