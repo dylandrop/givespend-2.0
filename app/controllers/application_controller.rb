@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   def current_cart
     if current_user
       if session[:cart_id]
-        @current_cart ||= Cart.find(session[:cart_id])
+        @current_cart ||= Cart.find(session[:cart_id]).decorate
         session[:cart_id] = nil if not @current_cart.purchased_at.nil?
       end
       if session[:cart_id].nil?

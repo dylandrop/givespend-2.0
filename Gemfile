@@ -21,6 +21,7 @@ gem 'kaminari'
 gem 'figaro'
 gem 'sidekiq'
 gem 'mailjet'
+gem 'draper'
 
 group :development do
   gem 'mailcatcher'

@@ -6,6 +6,8 @@
     </span><br><br>
     $<%= cents_to_dollars @item.price %> ($<%= cents_to_dollars(@item.price * @item.percentage / 100.0) %> goes to <%= @item.nonprofit.name.upcase %>)<br><br>
     <%= @item.description %><br> <Br>
-    <div class='add-to-cart'><%= link_to "ADD TO CART", add_carts_path(item_id: @item.id), method: :post, remote: true %></div>
+    <% if @item.active? %>
+      <div class='add-to-cart'><%= link_to "ADD TO CART", add_carts_path(item_id: @item.id), method: :post, remote: true %></div>
+    <% end %>
   </div>
 </div>

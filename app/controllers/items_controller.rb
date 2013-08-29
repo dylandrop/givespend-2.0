@@ -26,7 +26,7 @@ class ItemsController < ApplicationController
   end
 
   def index
-    @items = Item.page(params[:page]).per(8).includes(:nonprofit, :image)
+    @items = Item.active.page(params[:page]).per(8).includes(:nonprofit, :image)
     @categories = Category.all
   end
 
