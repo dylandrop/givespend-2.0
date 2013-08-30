@@ -1,0 +1,47 @@
+.meet-the-nonprofits-row {
+  background: white;
+  margin: 50px auto;
+  position: relative;
+  padding-top: 27px;
+  box-shadow: 0px 2px 2px 2px #c1c1c1;
+  title {
+    display: block;
+    height: 50px;
+    color: white;
+    background: #39f;
+    position: relative;
+    left: -15px;
+    padding-top: 15px;
+    padding-left: 50px;
+    font-size: 30px;
+    font-weight: 300;
+    box-shadow: 0px 1px 2px 0px #C1C1C1;
+  }
+
+  title:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    line-height: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 15px solid #155fa8;
+    border-left: 15px solid transparent;
+  }
+
+  .nonprofit-info {
+    padding: 20px;
+    font-weight: 300;
+    a {
+      text-decoration: none;
+      color: #39f;
+    }
+    a:visited {
+      color: #39f;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}

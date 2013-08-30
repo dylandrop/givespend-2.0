@@ -1,5 +1,10 @@
+<h3>Meet the Nonprofits</h3>
 <% @nonprofits.each do |nonprofit| %>
-  <%= link_to nonprofit do %>
-    <%= nonprofit.name %><br><br>
-  <% end %>
+  <div class="meet-the-nonprofits-row">
+    <title><%= nonprofit.name %></title>
+    <div class="nonprofit-info">
+      <%= nonprofit.info %><br><br>
+      Learn more about <%= nonprofit.name %> at <%= link_to nonprofit.website, nonprofit.website %>, or contact them at <%= mail_to nonprofit.email, nonprofit.email %>.
+    </div>
+  </div>
 <% end %>
