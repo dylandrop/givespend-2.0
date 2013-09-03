@@ -26,6 +26,7 @@ Givespend::Application.routes.draw do
   match 'preview', to: 'pages#preview', via: :get
   match 'about', to: 'pages#about', via: :get
   match 'contact', to: 'pages#contact', via: :get
+  match 'terms_of_service', to: 'pages#terms_of_service', via: :get
 
   resources :transactions, only: [:show, :create, :index]
   root :to => "items#index"
