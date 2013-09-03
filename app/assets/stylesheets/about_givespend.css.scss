@@ -1,7 +1,7 @@
 .about-givespend {
 	font-weight: 200;
-	padding: 10px 0px;
 	margin: 0 auto;
+	padding: 5%;
 	h2 {
 		font-size: 26px;
 		font-weight: 200;
@@ -11,11 +11,23 @@
 	p {
 		font-size: 17px;
 		background-color: #eee;
-		padding: 5%;
 		margin: 0 auto;
 	}
 	i {
 		font-weight: 400;
 		float: right;
+	}
+}
+.about-us {
+	padding: 5%;
+	font-weight: 300;
+	h3 {
+		font-weight: 300;
+	}
+	.about-givespend {
+		background-color: #c4c4c4;
+		p {
+			background-color: #c4c4c4;
+		}
 	}
 }
