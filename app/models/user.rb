@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :zipcode, :state, :city, :street_address, :first_name, :last_name, :charity_id, :category_id
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :zipcode, :state, :city, :street_address, :first_name, :last_name, :charity_id, :category_id, :terms
   
   has_many :authentications, as: :authenticatable
   has_many :carts
@@ -15,12 +15,14 @@ class User < ActiveRecord::Base
   has_many :reviews_received, class_name: Review, foreign_key: :user_received_id
   has_many :reviews_given, class_name: Review, foreign_key: :user_given_id
 
+  validates :terms, acceptance: { accept: true }
+
   def has_shipping_address?
     [street_address, city, state, zipcode].all?(&:present?)
   end
 
   def apply_omniauth(omniauth)
-    self.email = omniauth['extra']['raw_info']['email'] if omniauth['provider'] == 'facebook'
+    self.email = omniauth['extra']['raw_info']['email'] if omniauth['provider'] == 'facebook' && omniauth['extra'].try(:[], 'raw_info')
     secret = omniauth['credentials'].try(:[],'secret')
     authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'], :token=> omniauth['credentials']['token'], :secret => secret)
   end

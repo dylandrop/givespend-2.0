@@ -3,6 +3,15 @@
 <% if @user %>
   <%= form_for(@user, :as => resource_name, :url => registration_path(@user), html: {class: 'form-horizontal'}) do |f| %>
     <%= render 'form', f: f, title: 'Sign up' %>
+
+    <div class='control-group'>
+      <%= f.label :terms_of_service, class: 'control-label', for: 'user_terms' %>
+      <div class="controls">
+        <%= f.check_box :terms %>
+        <i>By clicking, I agree to Givespend's Terms of Service</i>
+      </div>
+    </div>
+
     <div class='control-group'>
       <div class="controls">
         <%= f.submit "Sign up" %>

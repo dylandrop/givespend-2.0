@@ -12,6 +12,7 @@ describe 'signing up' do
     fill_in "Email", with: "klaus@octavius.com"
     fill_in "Password", with: "artisblood"
     fill_in "Password confirmation", with: "artisblood"
+    check "Terms of service"
     click_button "Sign up"
     page.find(".notice").text.should == "Welcome! You have signed up successfully."
     my_account = User.last
@@ -22,6 +23,9 @@ describe 'signing up' do
     visit_sign_up
     set_omniauth_for :facebook
     click_link "Sign in with Facebook"
+    fill_in "Email", with: "sample@test.com"
+    check "Terms of service"
+    click_button "Sign up"
     page.find(".notice").text.should == "Welcome! You have signed up successfully."
   end
 
@@ -30,6 +34,7 @@ describe 'signing up' do
     set_omniauth_for :twitter
     click_link "Sign in with Twitter"
     fill_in "Email", with: "sample@test.com"
+    check "Terms of service"
     click_button "Sign up"
     page.find(".notice").text.should == "Welcome! You have signed up successfully."
   end
