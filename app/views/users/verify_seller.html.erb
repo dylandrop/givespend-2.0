@@ -1,1 +1,3 @@
+<% content_for :title, 'Givespend | Become a seller' %>
+
 <%= link_to "Sign in with Stripe", omniauth_authorize_path(:user, :stripe_connect, @stripe_parameters) %>
