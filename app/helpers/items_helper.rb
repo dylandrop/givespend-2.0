@@ -10,4 +10,8 @@ module ItemsHelper
   def image_tag_with_fallback image
     image_tag (image.present? ? image.content.url : 'fancybox_overlay.png')
   end
+
+  def seller_title item
+    item.seller.first_name ? item.seller.first_name : "User #{item.seller.id}"
+  end
 end
