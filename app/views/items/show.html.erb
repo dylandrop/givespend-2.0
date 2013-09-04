@@ -4,8 +4,12 @@
 	<%= image_tag_with_fallback @item.image %>
   <div class="description">
     <h3><%= @item.name %></h3><br>
+    <% if @item.seller.first_name %>
     <span class="listed-by">Listed by <%= link_to @item.seller.first_name, @item.seller %>
-    </span><br><br>
+    </span>
+    <br>
+    <% end %>
+    <br>
     $<%= cents_to_dollars @item.price %> ($<%= cents_to_dollars(@item.price * @item.percentage / 100.0) %> goes to <%= @item.nonprofit.name.upcase %>)<br><br>
     <%= @item.description %><br> <Br>
     <% if @item.active? %>
