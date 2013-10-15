@@ -35,7 +35,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: blog_production
+  database: gs_prod
   pool: 5
-  username: blog
+  username: givespend
   password:
