@@ -3,7 +3,7 @@ set :repo_url, 'git@github.com:dylandrop/givespend-2.0.git'
 
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
-server "23.92.22.78", :web, :app, :db, primary: true
+server "23.92.22.78"
 
 set :application, "givespend"
 set :user, "root"
