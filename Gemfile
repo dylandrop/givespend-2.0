@@ -22,6 +22,9 @@ gem 'figaro'
 gem 'sidekiq'
 gem 'mailjet'
 gem 'draper'
+gem 'capistrano-rails'
+gem 'capistrano-bundler'
+gem 'capistrano'
 
 group :development do
   gem 'mailcatcher'
